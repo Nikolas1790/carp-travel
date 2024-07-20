@@ -11,7 +11,7 @@ import Contacts from './components/mainComponents/Contacts';
 const HomePage: React.FC = () => {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <main>
         <Hero />
         <About />

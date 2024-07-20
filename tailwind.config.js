@@ -4,14 +4,14 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        'sm': '320px', 
+        'sm': '480px', 
         'md': '768px', 
         'xl': '1280px',
       },
       maxWidth: {
-        'container-sm': '100%',       // 100% ширина для мобильных устройств
-        'container-md': '768px',      // фиксированная ширина для планшетов
-        'container-xl': '1280px',     // фиксированная ширина для десктопов
+        'container-sm': '480px',     
+        'container-md': '768px',     
+        'container-xl': '1280px',     
       }
     },
   },
