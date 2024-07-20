@@ -1,11 +1,11 @@
 import React from 'react';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import About from './components/About';
-import Services from './components/Services';
-import Career from './components/Career';
-import Gallery from './components/Gallery';
-import Contacts from './components/Contacts';
+import Header from './components/mainComponents/Header';
+import Hero from './components/mainComponents/Hero';
+import About from './components/mainComponents/About';
+import Services from './components/mainComponents/Services';
+import Career from './components/mainComponents/Career';
+import Gallery from './components/mainComponents/Gallery';
+import Contacts from './components/mainComponents/Contacts';
 
 
 const HomePage: React.FC = () => {
