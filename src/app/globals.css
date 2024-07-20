@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -9,5 +12,20 @@
 }
 
 body {
+  color: white;
   background-color: #374b1c;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 16px; 
+  }
+}
+
+@media (min-width: 1280px) {
+  body {
+    font-size: 18px;
+  }
 }
