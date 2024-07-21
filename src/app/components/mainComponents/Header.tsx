@@ -2,6 +2,7 @@ import React from 'react';
 import Container from '../wrappers/sectionContainer';
 import Logo from '../logo';
 import NavMenu from '../navMenu';
+import BurgerMenu from '../burgerMenu';
 
 const Header: React.FC = () => {
   return (
@@ -13,6 +14,9 @@ const Header: React.FC = () => {
           <nav className="hidden md:block">
             <NavMenu />
           </nav>
+          <div className=" md:hidden">
+            <BurgerMenu />
+          </div>
         </div>
       </Container>
     </header>
