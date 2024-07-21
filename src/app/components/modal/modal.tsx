@@ -23,7 +23,7 @@ const Modal: React.FC<ModalProps> = ({ toggleModal }) => {
     }, []);
     
   return (
-    <div className='fixed w-full h-full inset-0 flex items-center justify-center bg-[rgba(1,10,5,0.75)] z-5'>
+    <div className='fixed w-full h-full inset-0 flex items-center justify-center bg-[rgba(1,10,5,0.75)]  backdrop-blur z-500'>
       <div className='p-4 rounded shadow-lg'>
         <div>
           <button className='absolute top-11 right-5' type='button' onClick={toggleModal}>CLOSE</button>          
