@@ -5,9 +5,21 @@ import CustomBtn from '../buttons/customBtn';
 
 const Hero: FC = () => {
   return (
-    <section id="hero">
+    <section
+      id="hero"
+      className="
+      h-[642px] 
+      bg-cover bg-center bg-no-repeat
+      bg-hero-sm
+      md:bg-hero-md
+      xl:bg-hero-xl
+      retina:bg-hero-sm-2x
+      md:retina:bg-hero-md-2x
+      xl:retina:bg-hero-xl-2x
+    "
+      >
       <Container>
-        <div className="bg-slate-700 h-[642px] pt-[105px] pb-14  md:pt-[123px] md:pb-16  xl:pt-[106px] xl:pb-20">
+        <div className=" h-[642px] pt-[105px] pb-14  md:pt-[123px] md:pb-16  xl:pt-[106px] xl:pb-20">
           <div className={"w-[118px] ml-auto mb-6"}>
             <h2 className={"text-[37px] font-thin leading-[1.21] tracking-[1.66px]"}>
               <span className={"font-medium leading-[1.21] tracking-normal"}>
