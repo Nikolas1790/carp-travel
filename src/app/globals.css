@@ -55,20 +55,21 @@ body.modal-open {
   font-size: 40px;
   font-weight: 500;
   line-height: 1.4;
-  letter-spacing: -1.6;
+  letter-spacing: -1.6px;
 }
 
 @media (min-width: 768px) {
   .title {
     font-size: 67px; 
     line-height: 1.2;
+    letter-spacing: -2.68px;
+    line-height: 1;
   }
 }
 
 @media (min-width: 1280px) {
   .title {
     font-size: 98px; 
-    line-height: 1.21;
   }
 }
 .title span {
