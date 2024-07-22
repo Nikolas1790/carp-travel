@@ -18,14 +18,14 @@ const About: FC = () => {
       "
     >
       <Container>
-        <div className="py-14">
-          <div className="mb-10">
-            <h2 className="title mb-2">
+        <div className="paddingY md:relative">
+          <div className="mb-10 md:re lative md:flex md:justify-between md:mb-[64px]">
+            <h2 className="title mb-2 md:mb-0">
               <span >{about.titleSpan}</span> {'\n'}
               {about.title}
             </h2>
-            <div className="w-[180px]">
-              <p className="text mb-5">
+            <div className="w-[180px] md:w-[220px]">
+              <p className="text mb-5 md:mb-4">
                 <span>{about.mainTextFirstParagraphSpan}</span>
                 {about.mainTextFirstParagraph}
               </p>
@@ -38,13 +38,13 @@ const About: FC = () => {
           
 
 
-          <div className="w-[184px] ml-auto mb-10 flex flex-col">
+          <div className="w-[184px] ml-auto mb-10 flex flex-col md:absolute md:bottom-[128px] md:left-0 md:w-[210px]">
             <h3 className="uppercase">{about.advantagesVacationers}</h3>
             <h3 className="uppercase self-end">{about.advantagesActiveTravelers}</h3>
             <p className="text">{about.advantagesText}</p>
           </div>
 
-          <p className="text">
+          <p className="text md:w-[463px] md:ml-auto">
             <span>{about.summarizeTextSpan}</span>
             {about.summarizeText}
           </p>

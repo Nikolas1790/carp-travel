@@ -33,6 +33,22 @@ body.modal-open {
     font-size: 18px;
   }
 }
+ /* padding-sections */
+.paddingY{
+  padding: 56px 0;
+  
+}
+@media (min-width: 768px) {
+  .paddingY {
+    padding: 64px 0; 
+  }
+}
+
+@media (min-width: 1280px) {
+  .paddingY {
+    padding: 105px 0; 
+  }
+}
 
 .title {
   text-transform: uppercase;
@@ -42,15 +58,45 @@ body.modal-open {
   letter-spacing: -1.6;
 }
 
+@media (min-width: 768px) {
+  .title {
+    font-size: 67px; 
+    line-height: 1.2;
+  }
+}
+
+@media (min-width: 1280px) {
+  .title {
+    font-size: 98px; 
+    line-height: 1.21;
+  }
+}
 .title span {
 font-weight: 100;
 }
+
+
+
 
 .text {
   font-size: 14px;
   font-weight: 200;
   line-height: 1.43;
-  letter-spacing: 0%;
+  letter-spacing: 0;
+}
+
+@media (min-width: 768px) {
+  .text {
+    font-size: 16px; 
+    line-height: 1.25;
+  }
+}
+
+@media (min-width: 1280px) {
+  .text {
+    font-size: 18px; 
+    line-height: 1.33;
+  }
 }
 
 .text span{
