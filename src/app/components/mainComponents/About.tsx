@@ -1,5 +1,5 @@
 import {FC} from 'react';
-import Container from '../wrappers/sectionContainer';
+import Container from '../wrappers/Container';
 import about from '../../../lib/data/about.json';
 
 const About: FC = () => {

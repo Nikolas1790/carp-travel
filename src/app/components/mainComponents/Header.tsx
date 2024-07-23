@@ -1,5 +1,5 @@
 import React from 'react';
-import Container from '../wrappers/sectionContainer';
+import Container from '../wrappers/Container';
 import Logo from '../logo';
 import NavMenu from '../navMenu';
 import BurgerMenu from '../burgerMenu';

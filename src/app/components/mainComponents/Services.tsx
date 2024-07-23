@@ -8,7 +8,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { EffectFade, Navigation, Pagination } from 'swiper/modules';
 import Slides from '../../../lib/data/slider'; 
-import Container from '../wrappers/sectionContainer';
+import Container from '../wrappers/Container';
 import services from '../../../lib/data/services.json';
 
 const Services: FC = () => {
@@ -31,26 +31,27 @@ const Services: FC = () => {
               style={{ backgroundImage: `url(${image})` }}
             >
              <Container>
-                <div className="                           bg-black bg-opacity-50 ">
+                <div className="w-[280px] h-[739px] flex flex-col                        ">
                   <h2 className="title text-4xl text-white mb-4"><span>{services.titleSpan}</span> {services.title}</h2>
-                  <p> 0 {id}/
-                    <span>0{Slides.length}</span>
+
+                  <p className="text-[43px] font-thin ml-auto w-full text-right mb-4"> 0{id}/
+                    <span className="opacity-20">0{Slides.length}</span>
                   </p>
+                  
 
+                  <img src={contentImg} alt={title} className=" max-w-full h-auto mb-3" />
 
-                  <img src={contentImg} alt={title} className="my-4 max-w-full h-auto" />
+                  <p className="text-xs font-extralight leading-6 tracking-[2.4px] ml-auto w-full text-right mb-6">{advantages}</p>
 
-                  <p>{advantages}</p>
-
-                  <ul className="flex flex-col md:flex-row md:space-x-4">
+                  <ul className="flex flex-col gap-4 md:flex-row md:space-x-4">
                     {Slides.map(({ id, title }, index) => (
-                      <li key={id} className="text-white">
-                        {index === activeIndex ? '• ' : ''}{title}
+                      <li key={id} className={` flex items-center text-[20px] leading-[17px] uppercase w-[190px] ${index === activeIndex ? 'icon-before' : 'opacity-20'}`}>
+                        {title}
                       </li>
                     ))}
                   </ul>
 
-                  <p className="text-white">{description}</p>
+                  <p className="text-white text mt-auto">{description}</p>
                 </div>
               </Container>
             </div>

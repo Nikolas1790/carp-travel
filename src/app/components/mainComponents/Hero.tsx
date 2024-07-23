@@ -1,5 +1,5 @@
 import {FC} from 'react';
-import Container from '../wrappers/sectionContainer';
+import Container from '../wrappers/Container';
 import hero from '../../../lib/data/hero.json';
 import CustomBtn from '../buttons/customBtn';
 

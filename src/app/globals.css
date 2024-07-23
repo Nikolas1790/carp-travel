@@ -103,3 +103,15 @@ font-weight: 100;
 .text span{
   font-weight: 400;
 }
+
+
+.icon-before::before {
+  content: '';
+  display: inline-block;
+  width: 10px; 
+  height: 10px;
+  background-image: url('/svg/check.svg'); 
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 8px; 
+}
