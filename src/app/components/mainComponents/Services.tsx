@@ -41,13 +41,6 @@ const Services: FC = () => {
     return () => window.removeEventListener('resize', updateBackgroundImage);
   }, [activeIndex]);
 
-  useEffect(() => {
-    const currentSlide = Slides[activeIndex];
-    const newImage = getImageForScreen(currentSlide.backgroundImages);
-    setBackgroundImage(newImage);
-  }, []);
-
-
   return (
     <section id="hero" className="relative  bg-cover bg-center bg-no-repeat" >
       <Swiper
