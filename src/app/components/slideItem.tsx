@@ -7,8 +7,6 @@ import ServicesNames from './servicesNames';
 import services from '../../lib/data/services.json';
 import Slides from '@/lib/data/slider';
 
-
-
 const SlideItem: FC<SlideItemProps> = ({ slide, backgroundImage, activeIndex,isDesktop, setActiveIndex }) => {
   const { id, contentImg, title, advantages, description } = slide;
   return (

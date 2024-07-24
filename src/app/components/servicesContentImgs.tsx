@@ -11,7 +11,7 @@ const ServicesContentImgs: FC<ServicesContentImgsProps> = ({ title, contentImg }
     <picture className="max-w-full h-auto mb-3 md:mb-0  md:col-start-1 md:row-start-2 ">
       <source
         srcSet={`${contentImg['sm-mob']} 1x, ${contentImg['sm-mob-2x']} 2x`}
-        media="(max-width: 768px)"
+        media="(max-width: 767px)"
       />
       <source
         srcSet={`${contentImg['md-tab']} 1x, ${contentImg['md-tab-2x']} 2x`}

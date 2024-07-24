@@ -21,7 +21,7 @@ const Services: FC = () => {
     const isRetina = window.devicePixelRatio > 1;
     const width = window.innerWidth;
 
-    if (width <= 768) {
+    if (width < 768) {
       setIsDesktop(false);
       return isRetina ? images['sm-mob-2x'] : images['sm-mob'];
     } else if (width >= 768 && width <= 1280) {
