@@ -26,13 +26,15 @@ export interface ContentImg {
 }
 
 export interface SlideItemProps {
-  id: number;
-  contentImg: any;
-  title: string;
-  advantages: string;
-  description: string;
+  slide: {
+    id: number;
+    contentImg: any;
+    title: string;
+    advantages: string;
+    description: string;
+  };
   backgroundImage: string;
   isDesktop: boolean;
-  setActiveIndex: (index: number) => void;
   activeIndex: number;
+  setActiveIndex: (index: number) => void;
 }

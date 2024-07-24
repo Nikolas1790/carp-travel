@@ -64,14 +64,10 @@ const Services: FC = () => {
         initialSlide={activeIndex}
         onSwiper={(swiper) => (swiperRef.current = swiper)}
       >
-        {Slides.map(({ id, contentImg, title, advantages, description }) => (
-          <SwiperSlide key={id}>
+        {Slides.map((slide) => (
+          <SwiperSlide key={slide.id}>
             <SlideItem
-              id={id}
-              contentImg={contentImg}
-              title={title}
-              advantages={advantages}
-              description={description}
+              slide={slide}
               backgroundImage={backgroundImage}
               isDesktop={isDesktop}
               setActiveIndex={setActiveIndex} 
