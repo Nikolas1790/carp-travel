@@ -1,4 +1,4 @@
-import Slides from '@/lib/data/slider';
+import Slides from '../../lib/data/slider';
 import { FC } from 'react';
 
 interface ServicesNamesProps {

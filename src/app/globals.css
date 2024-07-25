@@ -33,6 +33,11 @@ body.modal-open {
     font-size: 18px;
   }
 }
+
+li {
+  list-style: none;
+}
+
  /* padding-sections */
 .paddingY{
   padding: 56px 0;
@@ -117,6 +122,6 @@ font-weight: 100;
 }
 
 
-.fade-background {
-  transition: background-image 0.5s ease-in-out;
+.fade {
+  transition: all 0.5s ease-in-out;
 }

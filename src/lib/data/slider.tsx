@@ -1,6 +1,6 @@
 import { imageUrls } from "./slideImgs";
 
-interface Slide {
+interface SlideProps {
   id: number;
   backgroundImages: {
     'sm-mob': string;
@@ -23,7 +23,7 @@ interface Slide {
   description: string;
 }
 
-const Slides: Slide[] = [
+const Slides: SlideProps[] = [
   {
     id: 1,
     backgroundImages: imageUrls.backgroundImages.slide1,

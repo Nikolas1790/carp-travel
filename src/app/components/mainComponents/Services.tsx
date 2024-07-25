@@ -10,7 +10,7 @@ import 'swiper/css/pagination';
 import { EffectFade } from 'swiper/modules';
 import Slides from '../../../lib/data/slider'; 
 import SlideItem from '../slideItem';
-import { getImageForScreen } from '@/lib/utils/utils';
+import { getImageForScreen } from '../../../lib/utils/utils';
 
 const Services: FC = () => {
   const [activeIndex, setActiveIndex] = useState(0);
