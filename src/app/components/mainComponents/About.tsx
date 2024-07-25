@@ -7,14 +7,9 @@ const About: FC = () => {
     <section 
       id="about" 
       className="
-        h-auto
-        bg-cover bg-center bg-no-repeat
-        bg-about-sm
-        md:bg-about-md md:h-[689px]
-        xl:bg-about-xl xl:h-[809px]
-        retina:bg-about-sm-2x
-        md:retina:bg-about-md-2x
-        xl:retina:bg-about-xl-2x
+        h-auto bg-cover bg-center bg-no-repeat  bg-about-sm
+        md:bg-about-md md:h-[689px] retina:bg-about-sm-2x  md:retina:bg-about-md-2x
+        xl:bg-about-xl xl:h-[809px] xl:retina:bg-about-xl-2x
       "
     >
       <Container>
@@ -34,11 +29,9 @@ const About: FC = () => {
                 {about.mainTextSecondParagraph}
               </p>
             </div>
-          </div>
-          
+          </div>         
 
-
-          <div className="w-[184px] ml-auto mb-10 flex flex-col md:absolute md:bottom-[144px] md:left-0 md:w-[210px]  xl:w-[297px] xl:right-0 xl:bottom-[100px]">
+          <div className="w-[184px] ml-auto mb-10 flex flex-col md:absolute md:bottom-[144px] md:left-0 md:w-[210px]  xl:w-[297px] xl:right-0 xl:bottom-[64px]">
             <h3 className="uppercase">{about.advantagesVacationers}</h3>
             <h3 className="uppercase self-end">{about.advantagesActiveTravelers}</h3>
             <p className="text xl:tracking-[2.16px]">{about.advantagesText}</p>

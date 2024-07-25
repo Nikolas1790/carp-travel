@@ -11,7 +11,10 @@ const SlideItem: FC<SlideItemProps> = ({ slide, backgroundImage, activeIndex,isD
   const { id, contentImg, title, advantages, description } = slide;
   return (
     <div
-      className="h-[851px] flex items-center justify-center bg-cover bg-center bg-no-repeat md:h-[621px] xl:h-[779px] "
+      className={clsx(
+      'h-[851px] flex items-center justify-center bg-cover bg-center bg-no-repeat md:h-[621px] xl:h-[779px]',
+      'fade-background' 
+    )}
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       <Container>

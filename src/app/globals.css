@@ -115,3 +115,8 @@ font-weight: 100;
   background-repeat: no-repeat;
   margin-right: 8px; 
 }
+
+
+.fade-background {
+  transition: background-image 0.5s ease-in-out;
+}

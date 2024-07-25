@@ -7,9 +7,10 @@ import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { EffectFade, Navigation, Pagination } from 'swiper/modules';
+import { EffectFade } from 'swiper/modules';
 import Slides from '../../../lib/data/slider'; 
 import SlideItem from '../slideItem';
+import { getImageForScreen } from '@/lib/utils/utils';
 
 const Services: FC = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -17,26 +18,10 @@ const Services: FC = () => {
   const [isDesktop, setIsDesktop] = useState(false);
   const swiperRef = useRef<SwiperClass | null>(null);
 
-  const getImageForScreen = (images: any) => {
-    const isRetina = window.devicePixelRatio > 1;
-    const width = window.innerWidth;
-
-    if (width < 768) {
-      setIsDesktop(false);
-      return isRetina ? images['sm-mob-2x'] : images['sm-mob'];
-    } else if (width >= 768 && width <= 1280) {
-      setIsDesktop(false);
-      return isRetina ? images['md-tab-2x'] : images['md-tab'];
-    } else if (width >= 1280) {
-      setIsDesktop(true);
-      return isRetina ? images['lg-desktop-2x'] : images['lg-desktop'];
-    }
-  };
-
   useEffect(() => {
     const updateBackgroundImage = () => {
       const currentSlide = Slides[activeIndex];
-      const newImage = getImageForScreen(currentSlide.backgroundImages);
+      const newImage = getImageForScreen(currentSlide.backgroundImages, setIsDesktop);
       setBackgroundImage(newImage);
     };
 
@@ -55,10 +40,9 @@ const Services: FC = () => {
   return (
     <section id="hero" className="relative  bg-cover bg-center bg-no-repeat" >
       <Swiper
-        modules={[EffectFade, Navigation, Pagination]}
+        modules={[EffectFade]}
         effect="fade"
-        slidesPerView={1}
-        loop
+        slidesPerView={1}        
         autoplay={{ delay: 3000 }}     
         onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
         initialSlide={activeIndex}
