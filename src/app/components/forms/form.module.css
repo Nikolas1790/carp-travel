@@ -1,0 +1,84 @@
+
+.input {
+  font-size: 13px;
+  font-weight: 200;
+  line-height: 1.84;
+  width: 280px;
+  height: 24px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 8px;
+  outline: none; 
+  color: #ffffff;
+}
+
+.input.error {
+  color: rgb(255, 87, 87); /* цвет ошибки */
+}
+
+.input.pl {
+  padding-left: 40px;
+}
+
+
+.input.textarea {
+  height: 196px;
+  background: rgba(255, 255, 255, 0.05);
+  resize: none;
+}
+
+
+.label {
+  font-size: 12px;
+  font-weight: 200;
+  line-height: 2;
+  letter-spacing: 2.4px;
+  margin-bottom: 4px;
+  color: #ffffff;
+
+}
+
+.label-error {
+  color: rgb(255, 87, 87); /* цвет ошибки */
+}
+
+.err-container {
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.err {
+  position: absolute;
+  bottom: -20px;
+  font-size: 12px;
+  font-weight: 200;
+  line-height: 2;
+  letter-spacing: 2.4px;
+  color: rgb(255, 87, 87);
+  text-align: right;
+  margin-left: 10px;
+  display: inline-block;
+}
+
+.err::before {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: -20px;
+  
+  width: 18px;
+  height: 18px;
+  background-color: rgb(255, 87, 87); 
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  -webkit-mask-image: url('/svg/err.svg');
+  mask-image: url('/svg/err.svg');
+}
+
+
+
+
+

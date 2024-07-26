@@ -16,6 +16,7 @@
     "react": "18.3.0",
     "react-dom": "18.3.0",
     "react-hook-form": "^7.52.1",
+    "react-input-mask-next": "^3.0.0-alpha.12",
     "react-scroll": "^1.9.0",
     "swiper": "^11.1.5",
     "yup": "^1.4.0"
@@ -24,7 +25,9 @@
     "@types/node": "^20",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18",
+    "@types/react-input-mask": "^3.0.5",
     "@types/react-scroll": "^1.8.10",
+    "@types/swiper": "^6.0.0",
     "eslint": "^8",
     "eslint-config-next": "14.2.5",
     "eslint-config-prettier": "^9.1.0",
