@@ -5,7 +5,7 @@ type Inputs = {
   exampleRequired: string
 }
 
-export default function App() {
+export default function CareerForm() {
   const {
     register,
     handleSubmit,
