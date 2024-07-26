@@ -6,7 +6,8 @@ import Services from './components/mainComponents/Services';
 import Career from './components/mainComponents/Career';
 import Gallery from './components/mainComponents/Gallery';
 import Contacts from './components/mainComponents/Contacts';
-
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const HomePage: React.FC = () => {
   return (
@@ -20,6 +21,7 @@ const HomePage: React.FC = () => {
         <Gallery />
         <Contacts />
       </main>
+      <ToastContainer autoClose={1500} />
     </>
   );
 };

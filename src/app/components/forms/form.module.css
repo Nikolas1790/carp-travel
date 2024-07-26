@@ -11,21 +11,47 @@
   color: #ffffff;
 }
 
-.input.error {
-  color: rgb(255, 87, 87); /* цвет ошибки */
+@media (min-width: 768px) {
+  .input {
+    width: 222px;
+  }
+}
+@media (min-width: 1280px) {
+  .input {
+    font-size: 20px;
+    width: 291px;
+    height: 28px;
+  }
+}
+
+.error-color {
+  color: rgb(255, 87, 87); 
 }
 
 .input.pl {
   padding-left: 40px;
 }
-
+@media (min-width: 1280px) {
+  .input.pl  {
+    padding-left: 56px;
+  }
+}
 
 .input.textarea {
   height: 196px;
   background: rgba(255, 255, 255, 0.05);
   resize: none;
 }
-
+@media (min-width: 768px) {
+  .input.textarea  {
+    height: 228px;
+  }
+}
+@media (min-width: 1280px) {
+  .input.textarea  {
+    height: 268px;
+  }
+}
 
 .label {
   font-size: 12px;
@@ -36,6 +62,7 @@
   color: #ffffff;
 
 }
+
 
 .label-error {
   color: rgb(255, 87, 87); /* цвет ошибки */

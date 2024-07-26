@@ -31,6 +31,10 @@ const Career: FC = () => {
             <div className=' hidden md:block md:col-start-2 md:row-start-3 xl:col-start-3 xl:row-start-2 '>
               <CareerOpportunityText />
             </div>
+
+            <div className=' hidden md:flex md:col-start-2 md:row-start-4 xl:col-start-3 xl:row-start-3'>
+              <CareerForm />
+            </div>
           </div>
         </Container>
       </SectionCareer>
