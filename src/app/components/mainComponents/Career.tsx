@@ -3,7 +3,7 @@ import SectionCareer from '../wrappers/SectionCareer';
 import Container from '../wrappers/Container';
 import career from '../../../lib/data/career.json';
 import CareerWhyUs from '../../../lib/data/careerWhyUs';
-import CareerForm from '../forms/careerForm';
+// import CareerForm from '../forms/careerForm';
 import CareerOpportunityText from '../careerOpportunityText';
 
 const Career: FC = () => {
@@ -42,7 +42,7 @@ const Career: FC = () => {
           <Container>
             <div className="flex items-center justify-center h-full bg-black bg-opacity-50">
               <CareerOpportunityText />
-              <CareerForm />
+              {/* <CareerForm /> */}
             </div>
           </Container>
         </SectionCareer>
