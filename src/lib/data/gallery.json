@@ -1,0 +1,11 @@
+{
+  "titleSpan": "Our",
+  "title": "Gallery",
+  "images": {
+    "mobile": ["/img/gallery/slideImgs/mob-mountains-fores.jpg", "/img/gallery/slideImgs/mob-lake-forest.jpg", "/img/gallery/slideImgs//mob-river-forest.jpg"],
+    "mobileRetina": ["/img/gallery/slideImgs/mob-mountains-fores@2x.jpg", "/img/gallery/slideImgs/mob-lake-forest@2x.jpg", "/img/gallery/slideImgs/mob-river-forest@2x.jpg"],
+
+    "desktop": ["/img/gallery/slideImgs/desc-mountains-fores.jpg", "/img/gallery/slideImgs/desc-lake-forest.jpg", "/img/gallery/slideImgs/desc-river-forest.jpg"],
+    "desktopRetina": ["/img/gallery/slideImgs/desc-mountains-forest@2x.jpg", "/img/gallery/slideImgs/desc-lake-forest@2x.jpg", "/img/gallery/slideImgs/desc-river-forest@2x.jpg"]
+  }
+}

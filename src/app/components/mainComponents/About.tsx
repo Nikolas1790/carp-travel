@@ -6,9 +6,8 @@ const About: FC = () => {
   return (
     <section 
       id="about" 
-      className="
-        h-auto bg-cover bg-center bg-no-repeat  bg-about-sm
-        md:bg-about-md md:h-[689px] retina:bg-about-sm-2x  md:retina:bg-about-md-2x
+      className="h-auto bg-cover bg-center bg-no-repeat  bg-about-sm retina:bg-about-sm-2x
+        md:bg-about-md md:h-[689px]  md:retina:bg-about-md-2x
         xl:bg-about-xl xl:h-[809px] xl:retina:bg-about-xl-2x
       "
     >

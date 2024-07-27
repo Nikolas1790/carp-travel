@@ -7,15 +7,9 @@ const Hero: FC = () => {
   return (
     <section
       id="hero"
-      className="
-      h-[642px] 
-      bg-cover bg-center bg-no-repeat
-      bg-hero-sm
-      md:bg-hero-md md:h-[531px]
-      xl:bg-hero-xl xl:h-[763px]
-      retina:bg-hero-sm-2x
-      md:retina:bg-hero-md-2x
-      xl:retina:bg-hero-xl-2x
+      className="h-[642px] bg-cover bg-center bg-no-repeat bg-hero-sm retina:bg-hero-sm-2x
+      md:bg-hero-md md:h-[531px] md:retina:bg-hero-md-2x
+      xl:bg-hero-xl xl:h-[763px] xl:retina:bg-hero-xl-2x
     "
       >
       <Container>
