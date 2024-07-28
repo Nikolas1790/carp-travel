@@ -6,11 +6,11 @@ import { socialLinks } from '@/lib/utils/utils';
 const OurContacts: FC = () => {
   return (
     <div className='mb-[12px] 
-        md:flex md:justify-between md:w-[525px] md:ml-[34px] 
+        md:flex md:justify-between md:w-[525px] md:ml-[34px] md:mb-[64px]
         xl:flex-col xl:ml-[83px] xl:w-[313px] xl:mb-0 '>
 
       <div className='md:w-[258px] xl:mb-[124px] xl:w-[310px]'>
-        <div className='flex gap-5 mb-6  md:w-[258px] md:ml-[30px] xl:ml-[34px]  xl:w-[277px] ' >
+        <div className='flex gap-5 mb-6  md:w-[258px] md:ml-[30px] xl:ml-[34px]  xl:w-[277px] xl:mb-[64px]' >
           <div className='ml-auto md:w-[157px] xl:w-[176px]'>
             <a href={`tel:${contacts.phone.firstNumber}`}>
               <p>{contacts.phone.firstNumber}</p>

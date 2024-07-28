@@ -26,15 +26,16 @@ const ContactForm: FC = () => {
   });
 
   const onSubmit: SubmitHandler<IContactForm> = data => {
-    localStorage.setItem('formData', JSON.stringify(data));
-    toast.success('Form submitted successfully!');
+    localStorage.setItem('formContacts', JSON.stringify(data));
+    toast.success('Contact form submitted successfully!');
     reset();
   };
 
   return (
     <div className={styles.formContainer}>    
-      <form  onSubmit={handleSubmit(onSubmit)}  className={styles.form}>
-        <div className=" relative mb-4 xl:mb-[24px]">
+      <form  onSubmit={handleSubmit(onSubmit)}  className='md:flex xl:flex-col xl:w-[607px]'>
+        <div className='md:w-[137px] xl:flex xl:gap-5 xl:mb-10 '>
+          <div className=" relative mb-4 md:mb-[28px] xl:mb-0">
             <label htmlFor="fullName" className={clsx(styles.label, { [styles['label-error']]: errors.fullName })}>Full name</label>
             <input 
               id="fullName"
@@ -51,7 +52,7 @@ const ContactForm: FC = () => {
 
 
 
-          <div className=" relative mb-4 xl:mb-[24px]">
+          <div className=" relative mb-4 md:mb-0 ">
             <label htmlFor="email" className={clsx(styles.label, { [styles['label-error']]: errors.email })}>E-mail</label>
             <input 
               id="email"
@@ -65,14 +66,15 @@ const ContactForm: FC = () => {
               </div>
             )}
           </div>
+        </div>
 
-          
-          <div className="mb-4 xl:mb-6">
+        <div className='md:ml-auto xl:ml-0'> 
+          <div className="mb-4 md:w-[463px]  xl:mb-6 ">
             <label htmlFor="message" className={styles.label}>Message</label>
             <textarea 
               id="message"
               {...register('message')} 
-              className={clsx(styles.input, styles.textarea)}
+              className={clsx(styles.input, styles.contactTextarea)}
             ></textarea>
           </div>
 
@@ -86,6 +88,7 @@ const ContactForm: FC = () => {
               SEND
             </button>
           </div>
+        </div> 
       </form>
     
     </div>

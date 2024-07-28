@@ -53,6 +53,38 @@
   }
 }
 
+.input.contactTextarea {
+  height: 193px;
+  background: rgba(255, 255, 255, 0.05);
+  resize: none;
+}
+@media (min-width: 768px) {
+  .input.contactTextarea  {
+    width: 463px;
+    height: 221px;
+  }
+}
+@media (min-width: 1280px) {
+  .input.contactTextarea  {
+    width: 607px;
+    height: 174px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .label {
   font-size: 12px;
   font-weight: 200;
