@@ -1,0 +1,14 @@
+
+.contactTitle {
+  font-size: 12px;
+  font-weight: 200;
+  line-height: 1.66;
+  letter-spacing: 0px;
+}
+
+@media (min-width: 768px) {
+
+}
+@media (min-width: 1280px) {
+
+}

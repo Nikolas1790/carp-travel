@@ -38,8 +38,6 @@ export interface SlideItemProps {
   setActiveIndex: (index: number) => void;
 }
 
-
-
 export const getImageForScreen = ( images: any, setIsDesktop: (isDesktop: boolean) => void ) => {
   const isRetina = window.devicePixelRatio > 1;
   const width = window.innerWidth;
@@ -54,4 +52,11 @@ export const getImageForScreen = ( images: any, setIsDesktop: (isDesktop: boolea
     setIsDesktop(true);
     return isRetina ? images['lg-desktop-2x'] : images['lg-desktop'];
   }
+};
+
+export const socialLinks: { [key: string]: string } = {
+  facebook: "https://www.facebook.com/",
+  instagram: "https://www.instagram.com/",
+  youtube: "https://www.youtube.com/",
+  tiktok: "https://www.tiktok.com/"
 };

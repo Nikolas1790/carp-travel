@@ -105,7 +105,7 @@ const Gallery: FC = () => {
             {currentImages.map((src, index) => (
               <SwiperSlide key={index} className='flex justify-center items-center '>   
                 <div className="relative  w-[280px] h-[187px] md:right-[96px] md:w-[415px] md:h-[294px] xl:w-[606px] xl:h-[429px]  xl:right-[110px]">
-                  <Image src={src} alt="Gallery image" layout="fill" objectFit="cover"  onLoad={() => console.log('Image loaded')} />             
+                  <Image src={src} alt={gallery.title} layout="fill" objectFit="cover"  onLoad={() => console.log('Image loaded')} />             
                  </div>
               </SwiperSlide>
             ))} 
@@ -113,13 +113,13 @@ const Gallery: FC = () => {
               type="button"
               className="md:absolute md:z-300 md:bottom-0 md:left-[50px] md:text-[33px] md:font-thin  xl:bottom-[-10px] xl:left-[200px] hover:scale-105 focus:scale-107 transition"                  
             >
-              BACK
+              {gallery.btnBack}
             </button>
             <button
               type="button"
               className="md:absolute md:z-3 md:bottom-0 md:right-[50px] md:text-[33px] md:font-thin  xl:bottom-[-10px] xl:right-[200px] hover:scale-105 focus:scale-107 transition"                  
             >
-              NEXT
+              {gallery.btnNext}
             </button>            
           </Swiper>
         </div>
