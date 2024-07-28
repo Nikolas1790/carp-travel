@@ -8,15 +8,8 @@ import InputMask from 'react-input-mask-next';
 import styles from './form.module.css';
 import clsx from 'clsx';
 import { toast } from 'react-toastify';
-
-interface IFormInput {
-  fullName: string;
-  email: string;
-  position?: string;
-  phone: string;
-  message?: string;
-  consent: boolean;
-}
+import ButtonSend from './buttonSend';
+import { IFormInput } from '@/lib/utils/utils';
 
 const schema = yup.object({
   fullName: yup.string().required('Incorrect name'),
@@ -24,7 +17,7 @@ const schema = yup.object({
   position: yup.string(),
   phone: yup.string().required('Incorrect phone'),
   message: yup.string(),
-  consent: yup.boolean().required(),
+  consent: yup.boolean().oneOf([true], 'You must accept the terms').required(),
 }).required();
 
 const CareerForm: FC = () => {
@@ -34,9 +27,15 @@ const CareerForm: FC = () => {
   });
 
   const onSubmit: SubmitHandler<IFormInput> = data => {
-    localStorage.setItem('formData', JSON.stringify(data));
-    toast.success('Form submitted successfully!');
-    reset();
+    console.log(data); 
+    if (data.consent) {
+      toast.success('Form submitted successfully!');
+      localStorage.setItem('formData', JSON.stringify(data));
+      setChecked(false)
+      reset();
+    } else {
+      toast.error('You must accept the terms');
+    }
   };
 
   return (
@@ -111,37 +110,32 @@ const CareerForm: FC = () => {
             ></textarea>
           </div>
 
-          <div className="mb-4 md:absolute md:left-0 md:bottom-[-24px] md:w-[222px] xl:w-[291px] xl:bottom-[-4px]">
+
+
+
+
+
+          <div className="relative mb-4 md:absolute md:left-0 md:bottom-[-24px] md:w-[222px] xl:w-[291px] xl:bottom-[-4px]">
             <div className="flex items-center ">
-              <div className='flex items-center justify-center min-w-[22px] h-[22px] border border-white cursor-pointer mr-2 mb-5 '
-                   onClick={() => setChecked(!checked)}>
-                <div
-                  className={`w-3.5 h-3.5 ${!checked ? 'bg-white opacity-10' : 'bg-white'} `}
-                  onClick={() => setChecked(!checked)}>
-                </div>
-              </div>
               <input 
                 type="checkbox" 
                 {...register('consent')} 
-                className=" leading-tight hidden "
+                className= {clsx(styles['custom-checkbox'], )}
+                checked={checked}
                 onChange={() => setChecked(!checked)}
               />
               <span className="text-[12px] font-extralight leading-[2]" > 
                 I confirm my consent to the processing of personal data.
               </span>
+              {errors.consent && (
+                <div className={styles['err-container']}>
+                  <p className={styles.err}>{errors.consent.message}</p>
+                </div>
+              )}
             </div>
           </div>
-          <div className="flex items-center justify-center">
-            <button 
-              type="submit" 
-              className=" text-[30px] font-medium leading-[1.2] ml-auto xl:text-[32px]"
-              disabled={!checked}
-            >
-              SEND
-            </button>
-          </div>
+          <ButtonSend />
         </div>
-
       </form>
     </div>
   );

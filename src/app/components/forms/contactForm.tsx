@@ -7,12 +7,8 @@ import * as yup from 'yup';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
 import clsx from 'clsx';
-
-interface IContactForm {
-  fullName: string;
-  email: string;
-  message?: string;
-}
+import ButtonSend from './buttonSend';
+import { IContactForm } from '@/lib/utils/utils';
 
 const schema = yup.object({
   fullName: yup.string().required('Incorrect name'),
@@ -50,8 +46,6 @@ const ContactForm: FC = () => {
             )}
           </div>
 
-
-
           <div className=" relative mb-4 md:mb-0 ">
             <label htmlFor="email" className={clsx(styles.label, { [styles['label-error']]: errors.email })}>E-mail</label>
             <input 
@@ -77,17 +71,7 @@ const ContactForm: FC = () => {
               className={clsx(styles.input, styles.contactTextarea)}
             ></textarea>
           </div>
-
-
-
-          <div className="flex items-center justify-center">
-            <button 
-              type="submit" 
-              className=" text-[30px] font-medium leading-[1.2] ml-auto xl:text-[32px]"
-            >
-              SEND
-            </button>
-          </div>
+          <ButtonSend />
         </div> 
       </form>
     

@@ -60,3 +60,18 @@ export const socialLinks: { [key: string]: string } = {
   youtube: "https://www.youtube.com/",
   tiktok: "https://www.tiktok.com/"
 };
+
+export interface IFormInput {
+  fullName: string;
+  email: string;
+  position?: string;
+  phone: string;
+  message?: string;
+  consent: boolean;
+}
+
+export interface IContactForm {
+  fullName: string;
+  email: string;
+  message?: string;
+}

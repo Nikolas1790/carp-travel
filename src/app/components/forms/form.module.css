@@ -73,18 +73,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 .label {
   font-size: 12px;
   font-weight: 200;
@@ -92,21 +80,16 @@
   letter-spacing: 2.4px;
   margin-bottom: 4px;
   color: #ffffff;
-
 }
-
-
 .label-error {
   color: rgb(255, 87, 87); /* цвет ошибки */
 }
 
 .err-container {
-
   display: flex;
   align-items: center;
   justify-content: flex-end;
 }
-
 .err {
   position: absolute;
   bottom: -20px;
@@ -119,7 +102,6 @@
   margin-left: 10px;
   display: inline-block;
 }
-
 .err::before {
   content: '';
   position: absolute;
@@ -138,6 +120,42 @@
 }
 
 
+.custom-checkbox {
+  appearance: none;
+  min-width: 22px;
+  height: 22px;
+  border: 1px solid white;
+  cursor: pointer;
+  position: relative;
+  background-color: black;
+  margin-right: 8px;
+  margin-bottom: 24px;
+  padding: 2px;
+}
+@media (min-width: 1280px) {
+  .custom-checkbox  {
+    min-width: 28px;
+    height: 28px;
+  }
+}
 
+.custom-checkbox:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 14px;
+  height: 14px;
+  background-color: rgba(255, 255, 255, 0.1); 
+}
+@media (min-width: 1280px) {
+  .custom-checkbox:before  {
+    min-width: 16px;
+    height: 16px;
+  }
+}
 
-
+.custom-checkbox:checked:before {
+  background-color: white; 
+}

@@ -8,7 +8,7 @@ const Contacts: FC = () => {
   return (
     <section 
       id="contacts" 
-      className="  flex items-center justify-center bg-cover bg-center bg-no-repeat bg-contacts-sm retina:bg-contacts-sm-2x
+      className=" flex items-center justify-center bg-cover bg-center bg-no-repeat bg-contacts-sm retina:bg-contacts-sm-2x
         md:bg-contacts-md  md:retina:bg-contacts-md-2x
         xl:bg-contacts-xl xl:h-[764px] xl:retina:bg-contacts-xl-2x        
       "
@@ -19,8 +19,6 @@ const Contacts: FC = () => {
 
           <div className='xl:flex xl:gap-[231px]'>
             <OurContacts />
-
-
             <ContactForm />
           </div>
         </div>
