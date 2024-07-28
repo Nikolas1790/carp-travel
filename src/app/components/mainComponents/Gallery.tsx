@@ -2,16 +2,19 @@
 
 import {FC,  useState, useEffect} from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, A11y, EffectCoverflow } from 'swiper/modules';
+import {  EffectCoverflow } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/effect-coverflow';
 import gallery from '../../../lib/data/gallery.json';
 import Container from '../wrappers/Container';
+import Image from 'next/image';
 
 const Gallery: FC = () => {
   const [currentImages, setCurrentImages] = useState<string[]>([]);
 
-  useEffect(() => {
+    useEffect(() => {
     const updateImageSet = () => {
       const screenWidth = window.innerWidth;
       const isRetina = window.devicePixelRatio > 1;
@@ -23,6 +26,8 @@ const Gallery: FC = () => {
       } 
     };
 
+
+
     updateImageSet();
     window.addEventListener('resize', updateImageSet);
 
@@ -31,6 +36,13 @@ const Gallery: FC = () => {
     };
   }, []);
 
+  useEffect(() => {
+    console.log("Current images:", currentImages);
+  }, [currentImages]);
+  
+  if (!currentImages.length) {
+    return <p>Loading images...</p>;
+  }
   return (
     <section 
       id="gallery" 
@@ -40,48 +52,51 @@ const Gallery: FC = () => {
     "
     >
       <Container >
-        <div className="paddingY  flex flex-col w-[280px] h-[801px] bg-black bg-opacity-50 md:w-[704px] md:h-[575px] ">
-          <h2 className='title mb-6 md:mb-[72px] md:mx-auto' ><span>{gallery.titleSpan}</span> {gallery.title}</h2>
+        <div className="paddingY  flex flex-col w-[280px] h-[801px] bg-black bg-opacity-50 md:w-[704px] md:h-[575px] xl:w-[1280px] xl:h-[788px]  ">
+          <h2 className='title mb-6 md:mb-[72px] md:mx-auto xl:mx-0' ><span>{gallery.titleSpan}</span> {gallery.title}</h2>
 
           <Swiper
-            modules={[Navigation, Pagination, A11y, EffectCoverflow ]}
+            modules={[ EffectCoverflow ]}
             effect={'coverflow'}
             coverflowEffect={{
               rotate: 0,
               stretch: 0,
-              depth: 200,
+              depth: 0,
               modifier: 1,
-              slideShadows: false
             }}
-            loop
+            loop={true}
+            centeredSlides={true}
+            initialSlide={1}
+            grabCursor={true}
             slidesPerView={3}
             spaceBetween={24}
-
-            navigation
-            // pagination={{ clickable: true }}
+            pagination={{ clickable: true }}
             className="mySwiper"
             direction= 'vertical'
             breakpoints={{
+              320: {
+                centeredSlides: false, 
+              },
               768: {
-                slidesPerView: 3,
                 direction: 'horizontal',
+                centeredSlides: true, 
                 coverflowEffect: {
                   rotate: 0,
-                  stretch: -44,
+                  stretch: -80,
                   depth: 200,
                   modifier: 1,
                   scale: 0.29,
                 },
               },
               1280: {
-                slidesPerView: 3,
                 direction: 'horizontal',
+                centeredSlides: true, 
                 coverflowEffect: {
                   rotate: 0,
-                  stretch: -52,
+                  stretch: -110,
                   depth: 200,
                   modifier: 1,
-                  scale: 0.29, 
+                  scale: 0.52, 
                 }
               },
             }}
@@ -89,12 +104,23 @@ const Gallery: FC = () => {
           
             {currentImages.map((src, index) => (
               <SwiperSlide key={index} className='flex justify-center items-center '>   
-                               
-                  <img src={src} alt="Gallery image" className="w-[280px] h-full object-cover md:w-[415px]"/>             
-                     
+                <div className="relative  w-[280px] h-[187px] md:right-[96px] md:w-[415px] md:h-[294px] xl:w-[606px] xl:h-[429px]  xl:right-[110px]">
+                  <Image src={src} alt="Gallery image" layout="fill" objectFit="cover"  onLoad={() => console.log('Image loaded')} />             
+                 </div>
               </SwiperSlide>
             ))} 
-            
+            <button
+              type="button"
+              className="md:absolute md:z-300 md:bottom-0 md:left-[50px] md:text-[33px] md:font-thin  xl:bottom-[-10px] xl:left-[200px] hover:scale-105 focus:scale-107 transition"                  
+            >
+              BACK
+            </button>
+            <button
+              type="button"
+              className="md:absolute md:z-3 md:bottom-0 md:right-[50px] md:text-[33px] md:font-thin  xl:bottom-[-10px] xl:right-[200px] hover:scale-105 focus:scale-107 transition"                  
+            >
+              NEXT
+            </button>            
           </Swiper>
         </div>
       </Container>
