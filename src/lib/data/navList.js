@@ -1,22 +1,22 @@
 const navList = [
   {
-    href: '#about',
+    href: 'about',
     name: 'About',
   },
   {
-    href: '#services',
+    href: 'services',
     name: 'Services',
   },
   {
-    href: '#career',
+    href: 'career',
     name: 'Career',
   },
   {
-    href: '#gallery',
+    href: 'gallery',
     name: 'Gallery',
   },
   {
-    href: '#contacts',
+    href: 'contacts',
     name: 'Contacts',
   },
 ];

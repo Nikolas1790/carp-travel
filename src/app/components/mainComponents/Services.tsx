@@ -38,7 +38,7 @@ const Services: FC = () => {
   }, [activeIndex]);
 
   return (
-    <section id="hero" className="relative  bg-cover bg-center bg-no-repeat" >
+    <section id="services" className="relative  bg-cover bg-center bg-no-repeat" >
       <Swiper
         modules={[EffectFade]}
         effect="fade"

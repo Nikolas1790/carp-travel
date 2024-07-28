@@ -1,5 +1,8 @@
+'use client'
+
 import React from 'react';
 import navList from '../../lib/data/navList'
+import { Link } from 'react-scroll';
 
 interface NavMenuProps {
   toggleModal?: () => void;
@@ -10,9 +13,18 @@ const NavMenu: React.FC<NavMenuProps> = ({ toggleModal })  => {
     <ul className="text-[18px] space-y-12  md:flex md:text-base md:space-y-0 md:space-x-6  xl:space-x-14 " >
       {navList.map((i) => (
         <li key={i.name}>
-          <a href={i.href} onClick={toggleModal}>
+          <Link
+            className='cursor-pointer  hover:scale-105 focus:scale-107 transition'
+            activeClass="active"
+            to={i.href} 
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={500}
+            onClick={toggleModal}
+          >
             {i.name}
-          </a>
+          </Link>
         </li>
       ))}
     </ul>

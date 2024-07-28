@@ -8,28 +8,24 @@ interface ModalProps {
 }
 
 const Modal: React.FC<ModalProps> = ({ toggleModal }) => {  
+  const handleClickOutside = (event: React.MouseEvent<HTMLDivElement>) => {
+    if (event.target === event.currentTarget) {
+      toggleModal();
+    }
+  };
 
-
-    const handleClickOutside = (event: React.MouseEvent<HTMLDivElement>) => {
-      if (event.target === event.currentTarget) {
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
         toggleModal();
       }
     };
-  
-    useEffect(() => {
-      const handleKeyDown = (event: KeyboardEvent) => {
-        if (event.key === 'Escape') {
-          toggleModal();
-        }
-      };
+    document.addEventListener('keydown', handleKeyDown);
 
-      document.addEventListener('keydown', handleKeyDown);
-  
-      return () => {
-        document.removeEventListener('keydown', handleKeyDown);
-      };
-    }, [toggleModal]);
-    
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [toggleModal]);    
   return (
     <div className='fixed w-full h-full inset-0 flex items-center justify-center bg-[rgba(1,10,5,0.75)]  backdrop-blur z-500'
       onClick={handleClickOutside}

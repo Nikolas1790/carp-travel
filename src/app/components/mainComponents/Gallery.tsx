@@ -48,8 +48,7 @@ const Gallery: FC = () => {
       id="gallery" 
       className=" h-auto flex items-center justify-center bg-cover bg-center bg-no-repeat bg-gallery-sm retina:bg-gallery-sm-2x
       md:bg-gallery-md md:h-[575px] md:retina:bg-gallery-md-2x
-      xl:bg-gallery-xl xl:h-[788px] xl:retina:bg-gallery-xl-2x      
-    "
+      xl:bg-gallery-xl xl:h-[788px] xl:retina:bg-gallery-xl-2x"
     >
       <Container >
         <div className="paddingY  flex flex-col w-[280px] h-[801px] bg-black bg-opacity-50 md:w-[704px] md:h-[575px] xl:w-[1280px] xl:h-[788px]  ">
@@ -100,8 +99,7 @@ const Gallery: FC = () => {
                 }
               },
             }}
-          >
-          
+          >          
             {currentImages.map((src, index) => (
               <SwiperSlide key={index} className='flex justify-center items-center '>   
                 <div className="relative  w-[280px] h-[187px] md:right-[96px] md:w-[415px] md:h-[294px] xl:w-[606px] xl:h-[429px]  xl:right-[110px]">

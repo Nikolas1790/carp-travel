@@ -30,8 +30,6 @@ const OurContacts: FC = () => {
         </div>
       </div>
 
-
-
       <div className='flex gap-5 ml-[127px] md:w-[147px] md:ml-0 xl:w-[157px] xl:ml-[161px]'>
         <p className={styles.contactTitle}>{contacts.social.titleSotials}</p>
         <ul>
