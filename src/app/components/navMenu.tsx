@@ -14,7 +14,7 @@ const NavMenu: React.FC<NavMenuProps> = ({ toggleModal })  => {
       {navList.map((i) => (
         <li key={i.name}>
           <Link
-            className='cursor-pointer  hover:scale-105 focus:scale-107 transition'
+            className='link '
             activeClass="active"
             to={i.href} 
             spy={true}

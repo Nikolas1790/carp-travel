@@ -12,19 +12,19 @@ const OurContacts: FC = () => {
       <div className='md:w-[258px] xl:mb-[124px] xl:w-[310px]'>
         <div className='flex gap-5 mb-6  md:w-[258px] md:ml-[30px] xl:ml-[34px]  xl:w-[277px] xl:mb-[64px]' >
           <div className='ml-auto md:w-[157px] xl:w-[176px]'>
-            <a href={`tel:${contacts.phone.firstNumber}`}>
-              <p>{contacts.phone.firstNumber}</p>
+            <a href={`tel:${contacts.phone.firstNumber}`} className='link'>
+              {contacts.phone.firstNumber}
             </a>
-            <a href={`tel:${contacts.phone.secondNumber}`}>
-              <p>{contacts.phone.secondNumber}</p>
+            <a href={`tel:${contacts.phone.secondNumber}`}  className='link'>
+              {contacts.phone.secondNumber}
             </a>
           </div>
           <p className={styles.contactTitle}>{contacts.phone.titlePhoneNumber}</p>
         </div>
 
         <div className='flex gap-5 ml-4 mb-[26px] md:m-0'>
-          <a href={`mailto:${contacts.email.email}`}>
-            <p>{contacts.email.email}</p>
+          <a href={`mailto:${contacts.email.email}`} className='link'>
+            {contacts.email.email}
           </a>
           <p className={styles.contactTitle}>{contacts.email.titleEmail}</p>
         </div>
@@ -35,7 +35,7 @@ const OurContacts: FC = () => {
         <ul>
           {contacts.social.socialMedia.map((network) => (
             <li key={network} >
-              <a href={socialLinks[network]} className='block'>
+              <a href={socialLinks[network]} className='block link' >
                 {network}
               </a>
             </li>

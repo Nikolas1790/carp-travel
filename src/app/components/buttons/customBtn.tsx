@@ -3,6 +3,7 @@
 import {FC} from 'react';
 import styles from './customBtn.module.css';
 import { Link } from 'react-scroll';
+import clsx from 'clsx';
 
 const CustomBtn: FC = () => {
   return (
