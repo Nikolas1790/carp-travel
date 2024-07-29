@@ -15,6 +15,7 @@ const ServicesNames: FC<ServicesNamesProps>= ({ setActiveIndex, activeIndex }) =
             onClick={() => setActiveIndex(index)} 
             className={` flex items-center text-[20px] leading-[17px] uppercase w-[190px] text-left md:text-[22px] md:w-auto xl:text-[28px] xl:leading-[24px] ${index === activeIndex ? 'icon-before' : 'opacity-20'}`}
             type='button'
+            tabIndex={0}
           >
             {title}
           </button>

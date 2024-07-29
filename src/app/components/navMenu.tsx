@@ -22,6 +22,7 @@ const NavMenu: React.FC<NavMenuProps> = ({ toggleModal })  => {
             offset={0}
             duration={500}
             onClick={toggleModal}
+            tabIndex={0}
           >
             {i.name}
           </Link>

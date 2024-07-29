@@ -3,7 +3,6 @@
 import {FC} from 'react';
 import styles from './customBtn.module.css';
 import { Link } from 'react-scroll';
-import clsx from 'clsx';
 
 const CustomBtn: FC = () => {
   return (
@@ -15,6 +14,7 @@ const CustomBtn: FC = () => {
       smooth={true}
       offset={0}
       duration={500}
+      tabIndex={0}
     >
       JOIN NOW
     </Link>

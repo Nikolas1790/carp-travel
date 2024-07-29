@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Carp Travel',
-  description: 'holiday in the Carpathians', 
+  description: 'Holiday in the Carpathians', 
   metadataBase: new URL('https://carp-travel-peach.vercel.app/'),
 
 };
