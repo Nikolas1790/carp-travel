@@ -26,8 +26,6 @@ const Gallery: FC = () => {
       } 
     };
 
-
-
     updateImageSet();
     window.addEventListener('resize', updateImageSet);
 
@@ -52,7 +50,7 @@ const Gallery: FC = () => {
     >
       <Container >
         <div className="paddingY  flex flex-col w-[280px] h-[801px] bg-black bg-opacity-50 md:w-[704px] md:h-[575px] xl:w-[1280px] xl:h-[788px]  ">
-          <h2 className='title mb-6 md:mb-[72px] md:mx-auto xl:mx-0' ><span>{gallery.titleSpan}</span> {gallery.title}</h2>
+          <h2 className='title mb-6 md:mb-[72px] md:mx-auto xl:mx-0'><span>{gallery.titleSpan}</span> {gallery.title}</h2>
 
           <Swiper
             modules={[ EffectCoverflow ]}
@@ -71,7 +69,7 @@ const Gallery: FC = () => {
             spaceBetween={24}
             pagination={{ clickable: true }}
             className="mySwiper"
-            direction= 'vertical'
+            direction= 'vertical'                     
             breakpoints={{
               320: {
                 centeredSlides: false, 
@@ -101,9 +99,9 @@ const Gallery: FC = () => {
             }}
           >          
             {currentImages.map((src, index) => (
-              <SwiperSlide key={index} className='flex justify-center items-center '>   
-                <div className="relative  w-[280px] h-[187px] md:right-[96px] md:w-[415px] md:h-[294px] xl:w-[606px] xl:h-[429px]  xl:right-[110px]">
-                  <Image src={src} alt={gallery.title} layout="fill" objectFit="cover"  onLoad={() => console.log('Image loaded')} />             
+              <SwiperSlide key={index} className='flex justify-center items-center ' >   
+                <div className="relative w-[280px] h-[187px] md:right-[96px] md:w-[415px] md:h-[294px] xl:w-[606px] xl:h-[429px]  xl:right-[110px] ">
+                  <Image src={src} alt={gallery.title} layout="fill" objectFit="cover" loading="lazy" onLoad={() => console.log('Image loaded')} />             
                  </div>
               </SwiperSlide>
             ))} 

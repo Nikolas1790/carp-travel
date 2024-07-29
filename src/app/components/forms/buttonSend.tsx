@@ -7,7 +7,7 @@ const ButtonSend: FC = () => {
     <div className="flex items-center justify-center">
       <button 
         type="submit" 
-        className=" text-[30px] font-medium leading-[1.2] ml-auto xl:text-[32px]"
+        className="link text-[30px] font-medium leading-[1.2] ml-auto xl:text-[32px]"
       >
         SEND
       </button>

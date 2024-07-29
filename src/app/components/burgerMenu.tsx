@@ -12,7 +12,7 @@ const BurgerMenu: React.FC = () => {
   };
   return (
     <div>
-      <button type='button' onClick={toggleModal}>
+      <button type='button' onClick={toggleModal} className='link'>
         MENU
       </button>
       {isOpen && <Modal toggleModal={toggleModal} />}

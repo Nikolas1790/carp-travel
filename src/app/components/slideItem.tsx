@@ -7,15 +7,14 @@ import ServicesNames from './servicesNames';
 import services from '../../lib/data/services.json';
 import Slides from '../../lib/data/slider';
 
-const SlideItem: FC<SlideItemProps> = ({ slide, backgroundImage, activeIndex,isDesktop, setActiveIndex }) => {
+const SlideItem: FC<SlideItemProps> = ({ slide, activeIndex,isDesktop, setActiveIndex }) => {
   const { id, contentImg, title, advantages, description } = slide;
   return (
     <div
       className={clsx(
-      'h-[851px] flex items-center justify-center bg-cover bg-center bg-no-repeat md:h-[621px] xl:h-[779px]',
+      'h-[851px] flex items-center justify-center md:h-[621px] xl:h-[779px]',
       'fade' 
     )}
-      style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       <Container>
         <div className="w-[280px] h-[739px] flex flex-col   

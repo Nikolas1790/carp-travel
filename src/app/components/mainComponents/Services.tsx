@@ -49,10 +49,12 @@ const Services: FC = () => {
         onSwiper={(swiper) => (swiperRef.current = swiper)}
       >
         {Slides.map((slide) => (
-          <SwiperSlide key={slide.id}>
+          <SwiperSlide 
+            key={slide.id} 
+            className="h-auto bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: `url(${backgroundImage})`}}>
             <SlideItem
-              slide={slide}
-              backgroundImage={backgroundImage}
+              slide={slide}              
               isDesktop={isDesktop}
               setActiveIndex={setActiveIndex} 
               activeIndex={activeIndex}

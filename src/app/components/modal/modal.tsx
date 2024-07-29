@@ -33,7 +33,7 @@ const Modal: React.FC<ModalProps> = ({ toggleModal }) => {
       <div className='relative flex items-center justify-center w-[440px] h-full'>
         <div className='p-4 rounded shadow-lg'>
           <div>
-            <button className='absolute top-11 right-5' type='button' onClick={toggleModal}>CLOSE</button>          
+            <button className='absolute top-11 right-5 transition duration-300 ease-in-out transform hover:scale-110' type='button' onClick={toggleModal}>CLOSE</button>          
             <NavMenu toggleModal={toggleModal} />
           </div>
         </div>

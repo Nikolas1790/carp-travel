@@ -32,7 +32,6 @@ export interface SlideItemProps {
     advantages: string;
     description: string;
   };
-  backgroundImage: string;
   isDesktop: boolean;
   activeIndex: number;
   setActiveIndex: (index: number) => void;
