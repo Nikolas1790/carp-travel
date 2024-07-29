@@ -41,6 +41,7 @@ const Gallery: FC = () => {
   if (!currentImages.length) {
     return <p>Loading images...</p>;
   }
+  // bg-black bg-opacity-50
   return (
     <section 
       id="gallery" 
@@ -49,7 +50,7 @@ const Gallery: FC = () => {
       xl:bg-gallery-xl xl:h-[788px] xl:retina:bg-gallery-xl-2x"
     >
       <Container >
-        <div className="paddingY  flex flex-col w-[280px] h-[801px] bg-black bg-opacity-50 md:w-[704px] md:h-[575px] xl:w-[1280px] xl:h-[788px]  ">
+        <div className="paddingY  flex flex-col w-[280px] h-[801px] md:w-[704px] md:h-[575px] xl:w-[1280px] xl:h-[788px]  ">
           <h2 className='title mb-6 md:mb-[72px] md:mx-auto xl:mx-0'><span>{gallery.titleSpan}</span> {gallery.title}</h2>
 
           <Swiper

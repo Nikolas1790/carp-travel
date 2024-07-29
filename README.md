@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# CarpTravel
 
-## Getting Started
+## Welcome to CarpTravel!
 
-First, run the development server:
+CarpTravel is an interactive application that offers unique leisure activities in the Carpathians. Discover five exciting ways to spend your time: hot air ballooning, ATV riding, rock climbing, parachuting, and rafting.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. ### Platforms
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The application is available on mobile, tablet, and desktop versions, ensuring comfortable use on any device.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+2. ### Site Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **Navigation Section**: Direct contact with us through a convenient menu.
+- **Who We Are and Why Us**: Learn more about our mission and values.
+- **Types of Recreation**: A slider describing five types of active recreation.
+- **Feedback Form**: Leave your contact details, and we will get in touch with you.
+- **Gallery**: Enjoy the beauty of the Carpathians in our circular slider.
+- **Contact Us**: Our contact details for communication.
 
-## Learn More
+3. ### Technologies
 
-To learn more about Next.js, take a look at the following resources:
+- **Next.js**: A framework for server-side rendering.
+- **Tailwind CSS**: A utility-first framework for CSS.
+- **TypeScript**: A programming language for typing JavaScript code.
+- **React Hook Form and Yup**: Libraries for form validation.
+- **Swiper**: A component for creating sliders.
+- **React Scroll**: A plugin for smooth scrolling of the page.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. ### Documentation and Layout
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- [Technical Assignment](https://docs.google.com/document/d/1e6U2nDowFARzF6JNMKMDcVRVd7syu36m/edit#heading=h.d6whnyfnqdlb)
+- [Layout in Figma](https://www.figma.com/file/2nHaXyrwQxqXLYmPUGQuP1/Untitled?type=design&node-id=0%3A1&mode=design&t=GFpRhDWRmCy9U5n3-1)
 
-## Deploy on Vercel
+### Contact
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+For all inquiries, contact us at: [ovsyannikovnikolai1790@gmail.com](mailto:ovsyannikovnikolai1790@gmail.com).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Thank you for choosing CarpTravel to explore the most beautiful corners of our country!

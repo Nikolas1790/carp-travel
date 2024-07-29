@@ -22,7 +22,7 @@ const OurContacts: FC = () => {
           <p className={styles.contactTitle}>{contacts.phone.titlePhoneNumber}</p>
         </div>
 
-        <div className='flex gap-5 ml-4 mb-[26px] md:m-0'>
+        <div className='flex items-center gap-5 ml-4 mb-[26px] md:m-0'>
           <a href={`mailto:${contacts.email.email}`} className='link'>
             {contacts.email.email}
           </a>
