@@ -1,7 +1,7 @@
 "use client"
 
-import {FC,  useState, useEffect} from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import {FC,  useState, useEffect, useRef} from 'react';
+import { Swiper, SwiperRef, SwiperSlide } from 'swiper/react';
 import {  EffectCoverflow } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -13,6 +13,7 @@ import Image from 'next/image';
 
 const Gallery: FC = () => {
   const [currentImages, setCurrentImages] = useState<string[]>([]);
+  const swiperRef = useRef<SwiperRef>(null);
 
     useEffect(() => {
     const updateImageSet = () => {
@@ -41,6 +42,18 @@ const Gallery: FC = () => {
   if (!currentImages.length) {
     return <p>Loading images...</p>;
   }
+  const goNext = () => {
+    if (swiperRef.current) {
+      swiperRef.current.swiper.slideNext();
+    }
+  };
+
+  const goPrev = () => {
+    if (swiperRef.current) {
+      swiperRef.current.swiper.slidePrev();
+    }
+  };
+
   // bg-black bg-opacity-50
   return (
     <section 
@@ -54,6 +67,7 @@ const Gallery: FC = () => {
           <h2 className='title mb-6 md:mb-[72px] md:mx-auto xl:mx-0'><span>{gallery.titleSpan}</span> {gallery.title}</h2>
 
           <Swiper
+            ref={swiperRef}
             modules={[ EffectCoverflow ]}
             effect={'coverflow'}
             coverflowEffect={{
@@ -109,12 +123,14 @@ const Gallery: FC = () => {
             <button
               type="button"
               className="md:absolute md:z-300 md:bottom-0 md:left-[50px] md:text-[33px] md:font-thin  xl:bottom-[-10px] xl:left-[200px] hover:scale-105 focus:scale-107 transition"                  
+              onClick={goPrev}
             >
               {gallery.btnBack}
             </button>
             <button
               type="button"
               className="md:absolute md:z-3 md:bottom-0 md:right-[50px] md:text-[33px] md:font-thin  xl:bottom-[-10px] xl:right-[200px] hover:scale-105 focus:scale-107 transition"                  
+              onClick={goNext}
             >
               {gallery.btnNext}
             </button>            
