@@ -6,12 +6,17 @@ CarpTravel is an interactive application that offers unique leisure activities i
 
 ### Platforms
 
-The application is available on mobile, tablet, and desktop versions, ensuring comfortable use on any device.
+The CarpTravel app is available in mobile, tablet and desktop versions. Each version is designed with usability in mind and optimized for the respective device type.
+
+The application interface is designed in a modern style. The mobile version has a convenient burger menu that allows the user to easily navigate through the different sections of the application even on a small screen.
+
+The design of the app combines elegance and practicality, making the use of the app not only comfortable but also enjoyable on any of the available devices.
 
 ### Site Structure
 
-- **Navigation Section**: Direct contact with us through a convenient menu.
-[Technical Assignment](/public//img/readme/photo_2024-07-29_20-04-50.jpg)
+- **Home Section**: This section offers not only a convenient navigation menu to navigate through the main sections of the site, but also provides a direct opportunity to contact us. All necessary functions are gathered in one place for maximum user convenience.
+![Technical Assignment](/public/img/readme/home-desc.jpg)
+[Technical Assignment](https://docs.google.com/document/d/1e6U2nDowFARzF6JNMKMDcVRVd7syu36m/edit#heading=h.d6whnyfnqdlb)
 [Technical Assignment](https://docs.google.com/document/d/1e6U2nDowFARzF6JNMKMDcVRVd7syu36m/edit#heading=h.d6whnyfnqdlb)
 [Technical Assignment](https://docs.google.com/document/d/1e6U2nDowFARzF6JNMKMDcVRVd7syu36m/edit#heading=h.d6whnyfnqdlb)
 - **Who We Are and Why Us**: Learn more about our mission and values.
