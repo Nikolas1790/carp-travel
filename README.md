@@ -16,9 +16,10 @@ The design of the app combines elegance and practicality, making the use of the 
 
 - **Home Section**: This section offers not only a convenient navigation menu to navigate through the main sections of the site, but also provides a direct opportunity to contact us. All necessary functions are gathered in one place for maximum user convenience.
 ![home-desc](/public/img/readme/home-desc.jpg)
+![home-tabl](/public/img/readme/home-tabl.jpg)
 ![home-mob](/public/img/readme/home-mob.jpg)
 ![burger-menu](/public/img/readme/burger-menu.jpg)
-![home-tabl](/public/img/readme/home-tabl.jpg)
+
 - **Who We Are and Why Us**: Learn more about our mission and values.
 ![about](/public/img/readme/about.jpg)
 - **Types of Recreation**: A slider describing five types of active recreation.
