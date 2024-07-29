@@ -15,20 +15,20 @@ The design of the app combines elegance and practicality, making the use of the 
 ### Site Structure
 
 - **Home Section**: This section offers not only a convenient navigation menu to navigate through the main sections of the site, but also provides a direct opportunity to contact us. All necessary functions are gathered in one place for maximum user convenience.
-![Technical Assignment](/public/img/readme/home-desc.jpg)
-[Technical Assignment](https://docs.google.com/document/d/1e6U2nDowFARzF6JNMKMDcVRVd7syu36m/edit#heading=h.d6whnyfnqdlb)
-[Technical Assignment](https://docs.google.com/document/d/1e6U2nDowFARzF6JNMKMDcVRVd7syu36m/edit#heading=h.d6whnyfnqdlb)
-[Technical Assignment](https://docs.google.com/document/d/1e6U2nDowFARzF6JNMKMDcVRVd7syu36m/edit#heading=h.d6whnyfnqdlb)
+![home-desc](/public/img/readme/home-desc.jpg)
+![home-mob](/public/img/readme/home-mob.jpg)
+![burger-menu](/public/img/readme/burger-menu.jpg)
+![home-tabl](/public/img/readme/home-tabl.jpg)
 - **Who We Are and Why Us**: Learn more about our mission and values.
-[Technical Assignment](https://docs.google.com/document/d/1e6U2nDowFARzF6JNMKMDcVRVd7syu36m/edit#heading=h.d6whnyfnqdlb)
+![about](/public/img/readme/about.jpg)
 - **Types of Recreation**: A slider describing five types of active recreation.
-[Technical Assignment](https://docs.google.com/document/d/1e6U2nDowFARzF6JNMKMDcVRVd7syu36m/edit#heading=h.d6whnyfnqdlb)
+![services](/public/img/readme/services.jpg)
 - **Feedback Form**: Leave your contact details, and we will get in touch with you.
-[Technical Assignment](https://docs.google.com/document/d/1e6U2nDowFARzF6JNMKMDcVRVd7syu36m/edit#heading=h.d6whnyfnqdlb)
+![carrer](/public/img/readme/carrer.jpg)
 - **Gallery**: Enjoy the beauty of the Carpathians in our circular slider.
-[Technical Assignment](https://docs.google.com/document/d/1e6U2nDowFARzF6JNMKMDcVRVd7syu36m/edit#heading=h.d6whnyfnqdlb)
+![gallary](/public/img/readme/gallary.jpg)
 - **Contact Us**: Our contact details for communication.
-[Technical Assignment](https://docs.google.com/document/d/1e6U2nDowFARzF6JNMKMDcVRVd7syu36m/edit#heading=h.d6whnyfnqdlb)
+![coutact-us](/public/img/readme/coutact-us.jpg)
 
 ### Technologies
 
