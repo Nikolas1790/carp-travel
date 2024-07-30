@@ -11,7 +11,7 @@ const OurContacts: FC = () => {
 
       <div className='md:w-[258px] xl:mb-[124px] xl:w-[310px]'>
         <div className='flex gap-5 mb-6  md:w-[258px] md:ml-[30px] xl:ml-[34px]  xl:w-[277px] xl:mb-[64px]' >
-          <div className='ml-auto md:w-[157px] xl:w-[176px]'>
+          <div className='ml-auto w-[137px] md:w-[157px] xl:w-[176px]'>
             <a href={`tel:${contacts.phone.firstNumber}`} className='link'>
               {contacts.phone.firstNumber}
             </a>
