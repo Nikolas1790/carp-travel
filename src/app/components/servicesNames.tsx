@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import Slides from '../../lib/data/slider';
 import { FC } from 'react';
 
@@ -13,7 +14,11 @@ const ServicesNames: FC<ServicesNamesProps>= ({ setActiveIndex, activeIndex }) =
         <li key={id}>
           <button 
             onClick={() => setActiveIndex(index)} 
-            className={` flex items-center text-[20px] leading-[17px] uppercase w-[190px] text-left md:text-[22px] md:w-auto xl:text-[28px] xl:leading-[24px] ${index === activeIndex ? 'icon-before' : 'opacity-20'}`}
+            className={clsx(
+              'flex items-center text-[20px] leading-[17px] uppercase w-[190px] text-left md:text-[22px] md:w-auto xl:text-[28px] xl:leading-[24px]',
+              index === activeIndex ? 'icon-before' : 'opacity-20 hover:ml-2',
+              'transition-margin duration-300 ease-in-out'
+            )}
             type='button'
           >
             {title}
