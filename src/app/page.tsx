@@ -20,7 +20,7 @@ const HomePage: React.FC = () => {
         <meta property="og:title" content="Carp Travel" />
         <meta property="og:description" content="Traveling to the most beautiful corners of the Carpathians." />
         <meta property="og:url" content="https://carp-travel-peach.vercel.app/" />
-        <meta property="og:image" content="/public/img/readme/home-desc.jpg" />
+        <meta property="og:image" content="https://carp-travel-peach.vercel.app/img/readme/home-desc.jpg" />
         <meta property="og:locale" content="en_US"  />
       </Head>     
       <>
