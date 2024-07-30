@@ -148,7 +148,7 @@ font-weight: 100;
 
 .mySwiper {
   width: 100%; 
-  max-width: 1200px; 
+  max-width: 1280px; 
   margin: 0 auto; 
   
 }
@@ -161,7 +161,7 @@ font-weight: 100;
 
 @media (min-width: 1280px) {
   .mySwiper {
-    max-width: 1200px; 
+    max-width: 1280px; 
   }
 }
 

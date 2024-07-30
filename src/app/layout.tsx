@@ -1,14 +1,22 @@
 import React from 'react';
 import './globals.css';
 
-import type { Metadata } from 'next';
+// import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 const inter = Inter({ subsets: ['latin'] });
+export interface Metadata {
+  title: string;
+  description: string;
+  metadataBase: URL;
+  image?: URL;  // Добавьте это, если хотите включить изображение в мета-теги
+}
+
 
 export const metadata: Metadata = {
   title: 'Carp Travel',
   description: 'Holiday in the Carpathians', 
   metadataBase: new URL('https://carp-travel-peach.vercel.app/'),
+  image:  new URL('https://carp-travel-peach.vercel.app/img/readme/home-desc.jpg'),  
 
 };
 
