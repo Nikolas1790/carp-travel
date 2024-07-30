@@ -10,27 +10,20 @@ import 'swiper/css/pagination';
 import { EffectFade } from 'swiper/modules';
 import Slides from '../../../lib/data/slider'; 
 import SlideItem from '../slideItem';
-import { getImageForScreen } from '../../../lib/utils/utils';
 
 const Services: FC = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [backgroundImage, setBackgroundImage] = useState('');
   const [isDesktop, setIsDesktop] = useState(false);
   const swiperRef = useRef<SwiperClass | null>(null);
 
   useEffect(() => {
-    const updateBackgroundImage = () => {
-      const currentSlide = Slides[activeIndex];
-      const newImage = getImageForScreen(currentSlide.backgroundImages, setIsDesktop);
-      setBackgroundImage(newImage);
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth >= 1280);
     };
 
-    updateBackgroundImage();
-
-    window.addEventListener('resize', updateBackgroundImage);
-    return () => window.removeEventListener('resize', updateBackgroundImage);
-  }, [activeIndex]);
-
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
   useEffect(() => {
     if (swiperRef.current) {
       swiperRef.current.slideTo(activeIndex);
@@ -38,7 +31,7 @@ const Services: FC = () => {
   }, [activeIndex]);
 
   return (
-    <section id="services" className="relative  bg-cover bg-center bg-no-repeat" >
+    <section id="services" className="relative bg-cover bg-center bg-no-repeat" >
       <Swiper
         modules={[EffectFade]}
         effect="fade"
@@ -51,8 +44,9 @@ const Services: FC = () => {
         {Slides.map((slide) => (
           <SwiperSlide 
             key={slide.id} 
-            className="h-auto bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: `url(${backgroundImage})`}}>
+
+            className="h-auto bg-cover bg-center bg-no-repeat "
+            style={{ backgroundImage: `url(${slide.backgroundImages['lg-desktop']})` }} >
             <SlideItem
               slide={slide}              
               isDesktop={isDesktop}
