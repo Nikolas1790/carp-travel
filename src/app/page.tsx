@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from 'next/head';
 import Header from './components/mainComponents/Header';
 import Hero from './components/mainComponents/Hero';
 import About from './components/mainComponents/About';
@@ -12,7 +13,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const HomePage: React.FC = () => {
   return (
     <>
-      <head>
+      <Head>
         <title>Carp Travel</title>
         <meta name="description" content="Traveling to the most beautiful corners of the Carpathians. Enjoy stunning views, exciting expeditions and the best service!" />
         <meta property="og:type" content="website" />
@@ -21,19 +22,17 @@ const HomePage: React.FC = () => {
         <meta property="og:url" content="https://carp-travel-peach.vercel.app/" />
         <meta property="og:image" content="https://carp-travel-peach.vercel.app/img/readme/home-desc.jpg" />
         <meta property="og:locale" content="en_US"  />
-      </head>     
-      <>
-        <Header />
-        <main>
-          <Hero />
-          <About />
-          <Services />
-          <Career />
-          <Gallery />
-          <Contacts />
-        </main>
-        <ToastContainer autoClose={1500} />
-      </>
+      </Head>   
+      <Header />
+      <main>
+        <Hero />
+        <About />
+        <Services />
+        <Career />
+        <Gallery />
+        <Contacts />
+      </main>
+      <ToastContainer autoClose={1500} />      
     </>
   );
 };

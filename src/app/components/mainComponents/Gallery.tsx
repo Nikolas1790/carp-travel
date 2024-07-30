@@ -36,9 +36,9 @@ const Gallery: FC = () => {
     };
   }, []);
 
-  useEffect(() => {
-    console.log("Current images:", currentImages);
-  }, [currentImages]);
+  // useEffect(() => {
+  //   console.log("Current images:", currentImages);
+  // }, [currentImages]);
   
   if (!currentImages.length) {
     return <p>Loading images...</p>;
