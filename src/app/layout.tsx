@@ -4,11 +4,12 @@ import './globals.css';
 // import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 const inter = Inter({ subsets: ['latin'] });
+
 export interface Metadata {
   title: string;
   description: string;
   metadataBase: URL;
-  image?: URL;  // Добавьте это, если хотите включить изображение в мета-теги
+  image?: URL; 
 }
 
 
