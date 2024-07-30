@@ -1,5 +1,4 @@
 import React from 'react';
-import Head from 'next/head';
 import Header from './components/mainComponents/Header';
 import Hero from './components/mainComponents/Hero';
 import About from './components/mainComponents/About';
@@ -18,7 +17,7 @@ const HomePage: React.FC = () => {
         <meta name="description" content="Traveling to the most beautiful corners of the Carpathians. Enjoy stunning views, exciting expeditions and the best service!" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Carp Travel" />
-        <meta property="og:description" content="Holiday " />
+        <meta property="og:description" content="Holiday in the Carpathians" />
         <meta property="og:url" content="https://carp-travel-peach.vercel.app/" />
         <meta property="og:image" content="https://carp-travel-peach.vercel.app/img/readme/home-desc.jpg" />
         <meta property="og:locale" content="en_US"  />
