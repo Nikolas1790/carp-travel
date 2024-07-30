@@ -10,10 +10,11 @@ import 'swiper/css/effect-coverflow';
 import gallery from '../../../lib/data/gallery.json';
 import Container from '../wrappers/Container';
 import Image from 'next/image';
+import GalleryNextPrevBtns from '../galleryNexPrevBtns';
 
 const Gallery: FC = () => {
   const [currentImages, setCurrentImages] = useState<string[]>([]);
-  const swiperRef = useRef<SwiperRef>(null);
+  const swiperRef = useRef<SwiperRef | null>(null);
 
     useEffect(() => {
     const updateImageSet = () => {
@@ -44,13 +45,13 @@ const Gallery: FC = () => {
   }
   const goNext = () => {
     if (swiperRef.current) {
-      swiperRef.current.swiper.slideNext();
+      swiperRef.current?.swiper?.slideNext();
     }
   };
 
   const goPrev = () => {
     if (swiperRef.current) {
-      swiperRef.current.swiper.slidePrev();
+      swiperRef.current?.swiper?.slidePrev();
     }
   };
 
@@ -117,23 +118,10 @@ const Gallery: FC = () => {
               <SwiperSlide key={index} className='flex justify-center items-center ' >   
                 <div className="relative w-[280px] h-[187px] md:right-[96px] md:w-[415px] md:h-[294px] xl:w-[606px] xl:h-[429px]  xl:right-[110px] ">
                   <Image src={src} alt={gallery.title} layout="fill" objectFit="cover" loading="lazy" onLoad={() => console.log('Image loaded')} />             
-                 </div>
+                </div>
               </SwiperSlide>
             ))} 
-            <button
-              type="button"
-              className="md:absolute md:z-300 md:bottom-0 md:left-[50px] md:text-[33px] md:font-thin  xl:bottom-[-10px] xl:left-[200px] hover:scale-105 focus:scale-107 transition"                  
-              onClick={goPrev}
-            >
-              {gallery.btnBack}
-            </button>
-            <button
-              type="button"
-              className="md:absolute md:z-3 md:bottom-0 md:right-[50px] md:text-[33px] md:font-thin  xl:bottom-[-10px] xl:right-[200px] hover:scale-105 focus:scale-107 transition"                  
-              onClick={goNext}
-            >
-              {gallery.btnNext}
-            </button>            
+            <GalleryNextPrevBtns goPrev={goPrev} goNext={goNext} gallery={gallery} />
           </Swiper>
         </div>
       </Container>

@@ -38,9 +38,6 @@ const Career: FC = () => {
           </div>
         </Container>
       </SectionCareer>
-
-
-
       <div className='md:hidden'>   
         <SectionCareer >
           <Container>

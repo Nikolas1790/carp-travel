@@ -10,7 +10,6 @@ const Header: React.FC = () => {
       <Container>
         <div className="flex items-center justify-between">
           <Logo />
-
           <nav className="hidden md:block">
             <NavMenu />
           </nav>

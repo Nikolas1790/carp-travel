@@ -110,11 +110,6 @@ const CareerForm: FC = () => {
             ></textarea>
           </div>
 
-
-
-
-
-
           <div className="relative mb-4 md:absolute md:left-0 md:bottom-[-24px] md:w-[222px] xl:w-[291px] xl:bottom-[-4px]">
             <div className="flex items-center ">
               <input 

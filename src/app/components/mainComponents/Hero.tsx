@@ -9,8 +9,7 @@ const Hero: FC = () => {
       id="hero"
       className="h-auto bg-cover bg-center bg-no-repeat bg-hero-sm retina:bg-hero-sm-2x
       md:bg-hero-md  md:retina:bg-hero-md-2x
-      xl:bg-hero-xl  xl:retina:bg-hero-xl-2x
-    "
+      xl:bg-hero-xl  xl:retina:bg-hero-xl-2x "
       >
       <Container>
         <div className=" pt-[105px] pb-14 md:relative   md:flex  md:flex-row-reverse md:pt-[123px] md:pb-16  xl:pt-[130px] xl:pb-[101px]">

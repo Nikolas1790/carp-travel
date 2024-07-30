@@ -25,7 +25,8 @@ const Modal: React.FC<ModalProps> = ({ toggleModal }) => {
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
     };
-  }, [toggleModal]);    
+  }, [toggleModal]);   
+   
   return (
     <div className='fixed w-full h-full inset-0 flex items-center justify-center bg-[rgba(1,10,5,0.75)]  backdrop-blur z-500'
       onClick={handleClickOutside}
