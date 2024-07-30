@@ -13,28 +13,25 @@ import Image from 'next/image';
 import GalleryNextPrevBtns from '../galleryNexPrevBtns';
 
 const Gallery: FC = () => {
-  const [currentImages, setCurrentImages] = useState<string[]>([]);
-
-    useEffect(() => {
+  const [currentImages, setCurrentImages] = useState<string[]>([]);  
+  useEffect(() => {
     const updateImageSet = () => {
       const screenWidth = window.innerWidth;
-      const isRetina = window.devicePixelRatio > 1;
       
       if (screenWidth < 768) {
-        setCurrentImages(isRetina ? gallery.images.mobileRetina : gallery.images.mobile);
+        setCurrentImages(gallery.images.mobile);
       } else {
-        setCurrentImages(isRetina ? gallery.images.desktopRetina : gallery.images.desktop);
-      } 
+        setCurrentImages(gallery.images.desktop);
+      }
     };
-
+  
     updateImageSet();
     window.addEventListener('resize', updateImageSet);
-
+  
     return () => {
       window.removeEventListener('resize', updateImageSet);
     };
   }, []);
-
   return (
     <section 
       id="gallery" 

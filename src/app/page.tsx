@@ -12,14 +12,14 @@ import 'react-toastify/dist/ReactToastify.css';
 const HomePage: React.FC = () => {
   return (
     <> 
-      <Header />
+      {/* <Header /> */}
       <main>
-        <Hero />
+        {/* <Hero />
         <About />
         <Services />
-        <Career />
+        <Career /> */}
         <Gallery />
-        <Contacts />
+        {/* <Contacts /> */}
       </main>
       <ToastContainer autoClose={1500} />      
     </>
