@@ -16,7 +16,6 @@ const ServicesContentImgs: FC<ServicesContentImgsProps> = ({ title, contentImg }
       objectFit="cover"
       width={607}
       height={429}
-      sizes="(max-width: 767px) 100vw, (max-width: 1280px) 100vw, 100vw"
       loading="lazy"
     />
   );

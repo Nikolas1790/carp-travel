@@ -1,12 +1,12 @@
 export const imageUrls = {
   backgroundImages: {
     slide1: {
-    'sm-mob': '/img/services/backgroundImage/mob-bg-card-1.jpg',
-    'sm-mob-2x': '/img/services/backgroundImage/mob-bg-card-1@2x.jpg',
-    'md-tab': '/img/services/backgroundImage/tablet-bg-card-1.jpg',
-    'md-tab-2x': '/img/services/backgroundImage/tablet-bg-card-1@2x.jpg',
-    'lg-desktop': '/img/services/backgroundImage/desc-bg-card-1.jpg',
-    'lg-desktop-2x': '/img/services/backgroundImage/desc-bg-card-1@2x.jpg',
+      'sm-mob': '/img/services/backgroundImage/mob-bg-card-1.jpg',
+      'sm-mob-2x': '/img/services/backgroundImage/mob-bg-card-1@2x.jpg',
+      'md-tab': '/img/services/backgroundImage/tablet-bg-card-1.jpg',
+      'md-tab-2x': '/img/services/backgroundImage/tablet-bg-card-1@2x.jpg',
+      'lg-desktop': '/img/services/backgroundImage/desc-bg-card-1.jpg',
+      'lg-desktop-2x': '/img/services/backgroundImage/desc-bg-card-1@2x.jpg',
     },
     slide2: {
       'sm-mob': '/img/services/backgroundImage/mob-bg-card-2.jpg',
