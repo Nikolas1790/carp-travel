@@ -111,7 +111,7 @@ const Gallery: FC = () => {
             {currentImages.map((src, index) => (
               <SwiperSlide key={index} className='flex justify-center items-center ' >   
                 <div className="relative w-[280px] h-[187px] md:right-[96px] md:w-[415px] md:h-[294px] xl:w-[606px] xl:h-[429px]  xl:right-[110px] ">
-                  <Image src={src} alt={gallery.title} layout="fill" objectFit="cover" loading="lazy" onLoad={() => console.log('Image loaded')} />             
+                  <Image src={src} alt={gallery.title} layout="fill" objectFit="cover" loading="lazy"  />             
                 </div>
               </SwiperSlide>
             ))} 
