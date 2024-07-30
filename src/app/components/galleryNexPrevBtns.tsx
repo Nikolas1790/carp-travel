@@ -3,33 +3,28 @@
 import {FC} from 'react';
 
 interface GalleryNextPrevBtnsProps {
-  goPrev: () => void; 
-  goNext: () => void; 
   gallery: {    
     btnBack: string;  
     btnNext: string;   
   };
 }
 
-const GalleryNextPrevBtns: FC<GalleryNextPrevBtnsProps> = ({ goPrev, goNext, gallery }) => {
-
+const GalleryNextPrevBtns: FC<GalleryNextPrevBtnsProps> = ({  gallery }) => {
   return (
     <>
       <button
         type="button"
-        className="md:absolute md:z-300 md:bottom-0 md:left-[50px] md:text-[33px] md:font-thin  xl:bottom-[-10px] xl:left-[200px] hover:scale-105 focus:scale-107 transition"                  
-        onClick={goPrev}
+        className="prev-button md:absolute md:z-10 md:bottom-[90px] md:left-[50px] md:text-[33px] md:font-thin  xl:bottom-[90px] xl:left-[228px] hover:scale-105 focus:scale-107 transition" 
       >
         {gallery.btnBack}
       </button>
       <button
         type="button"
-        className="md:absolute md:z-3 md:bottom-0 md:right-[50px] md:text-[33px] md:font-thin  xl:bottom-[-10px] xl:right-[200px] hover:scale-105 focus:scale-107 transition"                  
-        onClick={goNext}
+        className="next-button md:absolute md:z-10 md:bottom-[90px] md:right-[50px] md:text-[33px] md:font-thin  xl:bottom-[90px] xl:right-[228px] hover:scale-105 focus:scale-107 transition"                  
       >
         {gallery.btnNext}
       </button>     
-    </>       
+    </>      
 
   );
 };
