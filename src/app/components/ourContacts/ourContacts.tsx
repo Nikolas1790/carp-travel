@@ -35,7 +35,7 @@ const OurContacts: FC = () => {
         <ul>
           {contacts.social.socialMedia.map((network) => (
             <li key={network} >
-              <a href={socialLinks[network]} className='block link' >
+              <a href={socialLinks[network]} className='block link' target="_blank" rel="noopener noreferrer nofollow" >
                 {network}
               </a>
             </li>

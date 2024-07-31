@@ -2,9 +2,5 @@
   "titleSpan": "Our",
   "title": "Gallery",
   "btnNext": "NEXT",
-  "btnBack": "BACK",
-  "images": {
-    "mobile": ["/img/gallery/slideImgs/mob-mountains-fores.jpg", "/img/gallery/slideImgs/mob-lake-forest.jpg", "/img/gallery/slideImgs/mob-river-forest.jpg"],
-    "desktop": ["/img/gallery/slideImgs/desc-mountains-fores.jpg", "/img/gallery/slideImgs/desc-lake-forest.jpg", "/img/gallery/slideImgs/desc-river-forest.jpg"]
-  }
+  "btnBack": "BACK"
 }

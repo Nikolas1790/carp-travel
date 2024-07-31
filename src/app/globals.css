@@ -154,6 +154,11 @@ font-weight: 100;
   .mySwiper {
     max-width: 704px;
   }
+  .mySwiper .swiper-slide-next,
+.mySwiper .swiper-slide-prev {
+  opacity: 0.5 !important;
+}
+
 }
 
 @media (min-width: 1280px) {
@@ -162,8 +167,8 @@ font-weight: 100;
   }
 }
 
-.mySwiper .swiper-slide-next,
+/* .mySwiper .swiper-slide-next,
 .mySwiper .swiper-slide-prev {
   opacity: 0.5 !important;
-}
+} */
 

@@ -1,6 +1,6 @@
 "use client"
 
-import {FC,  useState, useEffect } from 'react';
+import {FC} from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow, Navigation  } from 'swiper/modules';
 import 'swiper/css';
@@ -11,27 +11,10 @@ import gallery from '../../../lib/data/gallery.json';
 import Container from '../wrappers/Container';
 import Image from 'next/image';
 import GalleryNextPrevBtns from '../galleryNexPrevBtns';
+import { galleryImgs } from '@/lib/data/gellaryImgs';
+import GalleryImageList from '../gellaryMobList';
 
 const Gallery: FC = () => {
-  const [currentImages, setCurrentImages] = useState<string[]>([]);  
-  useEffect(() => {
-    const updateImageSet = () => {
-      const screenWidth = window.innerWidth;
-      
-      if (screenWidth < 768) {
-        setCurrentImages(gallery.images.mobile);
-      } else {
-        setCurrentImages(gallery.images.desktop);
-      }
-    };
-  
-    updateImageSet();
-    window.addEventListener('resize', updateImageSet);
-  
-    return () => {
-      window.removeEventListener('resize', updateImageSet);
-    };
-  }, []);
   return (
     <section 
       id="gallery" 
@@ -42,7 +25,8 @@ const Gallery: FC = () => {
       <Container >
         <div className="paddingY relative  flex flex-col w-[280px] h-[801px] md:w-[704px] md:h-[575px] xl:w-[1280px] xl:h-[788px]  ">
           <h2 className='title mb-6 md:mb-[72px] md:mx-auto xl:mx-0'><span>{gallery.titleSpan}</span> {gallery.title}</h2>
-
+          
+          <GalleryImageList />
           <Swiper
             modules={[ EffectCoverflow, Navigation ]}
             effect={'coverflow'}
@@ -94,10 +78,10 @@ const Gallery: FC = () => {
               },
             }}
           >          
-            {[...currentImages, ...currentImages ].map((src, index) => (
+            {[...galleryImgs, ...galleryImgs ].map((i, index) => (
               <SwiperSlide key={index} className='flex justify-center items-center ' >   
                 <div className="relative w-[280px] h-[187px] md:right-[96px] md:w-[415px] md:h-[294px] xl:w-[606px] xl:h-[429px]  xl:right-[100px] ">
-                  <Image src={src} alt={gallery.title} layout="fill" objectFit="cover" loading="lazy"  />             
+                  <Image src={i.src} alt={i.alt} layout="fill" objectFit="cover" loading="lazy"  />             
                 </div>
               </SwiperSlide>
             ))}             
