@@ -3,11 +3,10 @@ import clsx from 'clsx';
 import { SlideItemProps, getPaddingTop } from '../../lib/utils/utils';
 import ServicesContentImgs from './servicesContentImgs';
 import Container from './wrappers/Container';
-import ServicesNames from './servicesNames';
 import services from '../../lib/data/services.json';
 import Slides from '../../lib/data/slider';
 
-const SlideItem: FC<SlideItemProps> = ({ slide, activeIndex,isDesktop, setActiveIndex }) => {
+const SlideItem: FC<SlideItemProps> = ({ slide, isDesktop}) => {
   const { id, contentImg, title, advantages, description } = slide;
   return (
     <div
@@ -36,8 +35,7 @@ const SlideItem: FC<SlideItemProps> = ({ slide, activeIndex,isDesktop, setActive
             )}
           >
             {advantages}
-          </p>
-          
+          </p>          
           <p className=" text mt-auto md:col-start-2 md:row-start-4 md:text-[13px] md:text-justify xl:col-start-3 xl:row-start-3 xl:text-[18px]">{description}</p>
         </div>
       </Container>

@@ -21,7 +21,7 @@ const Services: FC = () => {
     const handleResize = () => {
       setIsDesktop(window.innerWidth >= 1280);
     };
-
+    handleResize(); 
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
@@ -33,8 +33,7 @@ const Services: FC = () => {
 
   return (
     <section id="services" className="relative bg-cover bg-center bg-no-repeat" >
-      <Swiper
-      
+      <Swiper      
         modules={[EffectFade]}
         effect="fade"
         slidesPerView={1}        
@@ -52,8 +51,6 @@ const Services: FC = () => {
             <SlideItem
               slide={slide}              
               isDesktop={isDesktop}
-              setActiveIndex={setActiveIndex} 
-              activeIndex={activeIndex}
             />
           </SwiperSlide>
         ))}

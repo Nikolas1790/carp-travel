@@ -33,8 +33,6 @@ export interface SlideItemProps {
     description: string;
   };
   isDesktop: boolean;
-  activeIndex: number;
-  setActiveIndex: (index: number) => void;
 }
 
 export const socialLinks: { [key: string]: string } = {
