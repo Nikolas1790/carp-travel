@@ -32,9 +32,9 @@ const ContactForm: FC = () => {
       <form  onSubmit={handleSubmit(onSubmit)}  className='md:flex xl:flex-col xl:w-[607px]'>
         <div className='md:w-[137px] xl:flex xl:gap-5 xl:mb-10 '>
           <div className=" relative mb-4 md:mb-[28px] xl:mb-0">
-            <label htmlFor="fullName" className={clsx(styles.label, { [styles['label-error']]: errors.fullName })}>Full name</label>
+            <label htmlFor="name" className={clsx(styles.label, { [styles['label-error']]: errors.fullName })}>Full name</label>
             <input 
-              id="nane"
+              id="name"
               {...register('fullName')} 
               className={clsx(styles.input, { [styles['error-color']]: errors.fullName })}
               placeholder="John Smith"
@@ -47,7 +47,7 @@ const ContactForm: FC = () => {
           </div>
 
           <div className=" relative mb-4 md:mb-0 ">
-            <label htmlFor="email" className={clsx(styles.label, { [styles['label-error']]: errors.email })}>E-mail</label>
+            <label htmlFor="e-mail" className={clsx(styles.label, { [styles['label-error']]: errors.email })}>E-mail</label>
             <input 
               id="e-mail"
               {...register('email')} 
@@ -64,7 +64,7 @@ const ContactForm: FC = () => {
 
         <div className='md:ml-auto xl:ml-0'> 
           <div className="mb-4 md:w-[463px]  xl:mb-6 ">
-            <label htmlFor="message" className={styles.label}>Message</label>
+            <label htmlFor="textarea" className={styles.label}>Message</label>
             <textarea 
               id="textarea"
               {...register('message')} 
