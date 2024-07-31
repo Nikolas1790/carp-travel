@@ -3,22 +3,23 @@
 import React, { FC } from 'react';
 import styles from './form.module.css';
 import { yupResolver } from '@hookform/resolvers/yup';
-import * as yup from 'yup';
+// import * as yup from 'yup';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
 import clsx from 'clsx';
 import ButtonSend from './buttonSend';
 import { IContactForm } from '@/lib/utils/utils';
+import { schemaContacts } from '@/lib/yupCircuits/yupCircuits';
 
-const schema = yup.object({
-  fullName: yup.string().required('Incorrect name'),
-  email: yup.string().email('Incorrect email').required('Invalid email'),
-  message: yup.string(),
-}).required();
+// const schema = yup.object({
+//   fullName: yup.string().required('Incorrect name'),
+//   email: yup.string().email('Incorrect email').required('Invalid email'),
+//   message: yup.string(),
+// }).required();
 
 const ContactForm: FC = () => {
   const { register, handleSubmit, formState: { errors }, reset } = useForm<IContactForm>({
-    resolver: yupResolver(schema)
+    resolver: yupResolver(schemaContacts)
   });
 
   const onSubmit: SubmitHandler<IContactForm> = data => {

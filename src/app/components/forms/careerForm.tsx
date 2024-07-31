@@ -2,7 +2,7 @@
 
 import { FC, useState } from 'react';
 import { yupResolver } from '@hookform/resolvers/yup';
-import * as yup from 'yup';
+// import * as yup from 'yup';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import InputMask from 'react-input-mask-next';
 import styles from './form.module.css';
@@ -10,20 +10,21 @@ import clsx from 'clsx';
 import { toast } from 'react-toastify';
 import ButtonSend from './buttonSend';
 import { IFormInput } from '@/lib/utils/utils';
+import { schemaCareer } from '@/lib/yupCircuits/yupCircuits';
 
-const schema = yup.object({
-  fullName: yup.string().required('Incorrect name'),
-  email: yup.string().email('Incorrect email').required('Invalid email'),
-  position: yup.string(),
-  phone: yup.string().required('Incorrect phone'),
-  message: yup.string(),
-  consent: yup.boolean().oneOf([true], 'You must accept the terms').required(),
-}).required();
+// const schema = yup.object({
+//   fullName: yup.string().required('Incorrect name'),
+//   email: yup.string().email('Incorrect email').required('Invalid email'),
+//   position: yup.string(),
+//   phone: yup.string().required('Incorrect phone'),
+//   message: yup.string(),
+//   consent: yup.boolean().oneOf([true], 'You must accept the terms').required(),
+// }).required();
 
 const CareerForm: FC = () => {
   const [checked, setChecked] = useState(false);
   const { register, handleSubmit, formState: { errors }, reset } = useForm<IFormInput>({
-    resolver: yupResolver(schema)
+    resolver: yupResolver(schemaCareer)
   });
 
   const onSubmit: SubmitHandler<IFormInput> = data => {
