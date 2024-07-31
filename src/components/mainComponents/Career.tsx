@@ -1,8 +1,8 @@
 import {FC} from 'react';
 import SectionCareer from '../wrappers/SectionCareer';
 import Container from '../wrappers/Container';
-import career from '../../../lib/data/career.json';
-import CareerWhyUs from '../../../lib/data/careerWhyUs';
+import career from '../../lib/data/career.json';
+import CareerWhyUs from '../../lib/data/careerWhyUs';
 import CareerForm from '../forms/careerForm';
 import CareerOpportunityText from '../careerOpportunityText';
 

@@ -1,5 +1,5 @@
 import {FC} from 'react';
-import contacts from '../../../lib/data/contacts.json';
+import contacts from '../../lib/data/contacts.json';
 import styles from './ourContacts.module.css';
 import { socialLinks } from '@/lib/utils/utils';
 

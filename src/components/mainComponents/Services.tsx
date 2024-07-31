@@ -8,7 +8,7 @@ import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { EffectFade } from 'swiper/modules';
-import Slides from '../../../lib/data/slider'; 
+import Slides from '../../lib/data/slider'; 
 import SlideItem from '../slideItem';
 import ServicesNames from '../servicesNames';
 

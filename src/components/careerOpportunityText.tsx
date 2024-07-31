@@ -1,4 +1,4 @@
-import career from '../../lib/data/career.json';
+import career from '../lib/data/career.json';
 import { FC } from 'react';
 
 const CareerOpportunityText: FC = () => {

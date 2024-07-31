@@ -1,6 +1,6 @@
 import {FC} from 'react';
 import Container from '../wrappers/Container';
-import contacts from '../../../lib/data/contacts.json';
+import contacts from '../../lib/data/contacts.json';
 import OurContacts from '../ourContacts/ourContacts';
 import ContactForm from '../forms/contactForm';
 

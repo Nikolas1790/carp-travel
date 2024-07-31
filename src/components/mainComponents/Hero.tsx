@@ -1,6 +1,6 @@
 import {FC} from 'react';
 import Container from '../wrappers/Container';
-import hero from '../../../lib/data/hero.json';
+import hero from '../../lib/data/hero.json';
 import CustomBtn from '../buttons/customBtn';
 
 const Hero: FC = () => {

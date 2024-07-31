@@ -1,10 +1,10 @@
 import { FC } from 'react';
 import clsx from 'clsx';
-import { SlideItemProps, getPaddingTop } from '../../lib/utils/utils';
+import { SlideItemProps, getPaddingTop } from '../lib/utils/utils';
 import ServicesContentImgs from './servicesContentImgs';
 import Container from './wrappers/Container';
-import services from '../../lib/data/services.json';
-import Slides from '../../lib/data/slider';
+import services from '../lib/data/services.json';
+import Slides from '../lib/data/slider';
 
 const SlideItem: FC<SlideItemProps> = ({ slide, isDesktop}) => {
   const { id, contentImg, title, advantages, description } = slide;

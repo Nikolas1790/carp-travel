@@ -7,7 +7,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-coverflow';
-import gallery from '../../lib/data/gallery.json';
+import gallery from '../lib/data/gallery.json';
 import Image from 'next/image';
 import GalleryNextPrevBtns from './galleryNexPrevBtns';
 import { galleryImgs } from '@/lib/data/gellaryImgs';

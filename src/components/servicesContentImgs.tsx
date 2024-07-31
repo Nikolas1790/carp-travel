@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { ContentImg } from '../../lib/utils/utils';
+import { ContentImg } from '../lib/utils/utils';
 import { FC } from 'react';
 
 interface ServicesContentImgsProps {
