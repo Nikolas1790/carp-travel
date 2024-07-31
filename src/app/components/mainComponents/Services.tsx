@@ -10,6 +10,7 @@ import 'swiper/css/pagination';
 import { EffectFade } from 'swiper/modules';
 import Slides from '../../../lib/data/slider'; 
 import SlideItem from '../slideItem';
+import ServicesNames from '../servicesNames';
 
 const Services: FC = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -33,6 +34,7 @@ const Services: FC = () => {
   return (
     <section id="services" className="relative bg-cover bg-center bg-no-repeat" >
       <Swiper
+      
         modules={[EffectFade]}
         effect="fade"
         slidesPerView={1}        
@@ -56,8 +58,9 @@ const Services: FC = () => {
           </SwiperSlide>
         ))}
       </Swiper>
+      <ServicesNames setActiveIndex={setActiveIndex} activeIndex={activeIndex} />
     </section>
-  );
+  );  
 };
 
 export default Services;

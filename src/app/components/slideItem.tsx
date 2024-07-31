@@ -14,7 +14,7 @@ const SlideItem: FC<SlideItemProps> = ({ slide, activeIndex,isDesktop, setActive
       className={clsx(
       'h-[851px] flex items-center justify-center md:h-[621px] xl:h-[779px]',
       'fade' 
-    )}
+      )}
     >
       <Container>
         <div className="w-[280px] h-[739px] flex flex-col   
@@ -37,7 +37,7 @@ const SlideItem: FC<SlideItemProps> = ({ slide, activeIndex,isDesktop, setActive
           >
             {advantages}
           </p>
-          <ServicesNames setActiveIndex={setActiveIndex} activeIndex={activeIndex} />
+          
           <p className=" text mt-auto md:col-start-2 md:row-start-4 md:text-[13px] md:text-justify xl:col-start-3 xl:row-start-3 xl:text-[18px]">{description}</p>
         </div>
       </Container>

@@ -34,12 +34,13 @@ const CareerForm: FC = () => {
       <form onSubmit={handleSubmit(onSubmit)} className="w-full max-w-lg md:flex md:gap-5 md:relative xl:gap-6 ">
         <div className='md:w-[222px] xl:w-[291px] xl:h-[380px]'>
           <div className=" relative mb-4 xl:mb-[24px]">
-            <label  className={clsx(styles.label, { [styles['label-error']]: errors.fullName })}>Full name
-            <input 
-              {...register('fullName')} 
-              className={clsx(styles.input, { [styles['error-color']]: errors.fullName })}
-              placeholder="John Smith"
-            />
+            <label  className={clsx(styles.label, { [styles['label-error']]: errors.fullName })}>
+              Full name
+              <input 
+                {...register('fullName')} 
+                className={clsx(styles.input, { [styles['error-color']]: errors.fullName })}
+                placeholder="John Smith"
+              />
             </label>
             {errors.fullName && (
               <div className={styles['err-container']}>
@@ -49,12 +50,13 @@ const CareerForm: FC = () => {
           </div>
 
           <div className=" relative mb-4 xl:mb-[24px]">
-            <label className={clsx(styles.label, { [styles['label-error']]: errors.email })}>E-mail
-            <input 
-              {...register('email')} 
-              className={clsx(styles.input, { [styles['error-color']]: errors.email })}
-              placeholder="johnsmith@email.com"
-            />
+            <label className={clsx(styles.label, { [styles['label-error']]: errors.email })}>
+              E-mail
+              <input 
+                {...register('email')} 
+                className={clsx(styles.input, { [styles['error-color']]: errors.email })}
+                placeholder="johnsmith@email.com"
+              />
             </label>
             {errors.email && (
               <div className={styles['err-container']}>
@@ -64,24 +66,25 @@ const CareerForm: FC = () => {
           </div>
 
           <div className="mb-4 xl:mb-[24px]">
-            <label className={styles.label}>Position
-            <input 
-              {...register('position')} 
-              className={styles.input}
-              placeholder="Movie maker"
-            />
+            <label className={styles.label}>
+              Position
+              <input 
+                {...register('position')} 
+                className={styles.input}
+                placeholder="Movie maker"
+              />
             </label>
           </div>
 
           <div className=" relative mb-4 xl:mb-0">
             <label className={clsx(styles.label, { [styles['label-error']]: errors.phone })}>
               Phone
-            <InputMask 
-              mask="(999) 99 99 999"
-              {...register('phone')} 
-              className={clsx(styles.input, styles.pl , { [styles['error-color']]: errors.phone })}
-              placeholder="(097) 12 34 567"
-            />
+              <InputMask 
+                mask="(999) 99 99 999"
+                {...register('phone')} 
+                className={clsx(styles.input, styles.pl , { [styles['error-color']]: errors.phone })}
+                placeholder="(097) 12 34 567"
+              />
             </label>
             <p className=' absolute top-[26px] left-2 text-[13px] font-extralight md:top-[29px] xl:text-[20px] xl:top-[27px] '>+ 38</p>
             {errors.phone && (
@@ -96,10 +99,10 @@ const CareerForm: FC = () => {
           <div className="mb-4 xl:mb-6">
             <label className={styles.label}>
               Message
-            <textarea 
-              {...register('message')} 
-              className={clsx(styles.input, styles.textarea)}
-            ></textarea>
+              <textarea 
+                {...register('message')} 
+                className={clsx(styles.input, styles.textarea)}
+              ></textarea>
             </label>
           </div>
 
