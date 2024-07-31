@@ -34,13 +34,13 @@ const CareerForm: FC = () => {
       <form onSubmit={handleSubmit(onSubmit)} className="w-full max-w-lg md:flex md:gap-5 md:relative xl:gap-6 ">
         <div className='md:w-[222px] xl:w-[291px] xl:h-[380px]'>
           <div className=" relative mb-4 xl:mb-[24px]">
-            <label htmlFor="n" className={clsx(styles.label, { [styles['label-error']]: errors.fullName })}>Full name</label>
+            <label  className={clsx(styles.label, { [styles['label-error']]: errors.fullName })}>Full name
             <input 
-              id="n"
               {...register('fullName')} 
               className={clsx(styles.input, { [styles['error-color']]: errors.fullName })}
               placeholder="John Smith"
             />
+            </label>
             {errors.fullName && (
               <div className={styles['err-container']}>
                 <p className={styles.err}>{errors.fullName.message}</p>
