@@ -9,9 +9,11 @@ import CareerOpportunityText from '../careerOpportunityText';
 const Career: FC = () => {
   return (
     <>
-      <SectionCareer>
+      <SectionCareer >
         <Container>
-          <div className="w-[280px] h-full mx-auto  
+          <div 
+            id="career" 
+            className="w-[280px] h-full mx-auto  
               md:w-[704px] md:grid md:grid-cols-3 md:grid-rows-[80px_96px_88px_316px] md:gap-x-[20px] 
               xl:w-[1232px] xl:grid-cols-[293px_285px_290px_292px] xl:grid-rows-[128px_83px_380px] xl:gap-x-[24px]  ">
             <h2 className='title mb-6 col-span-2 md:col-start-1 md:row-start-1 md: '><span>{career.titleSpan}</span>  {career.title}</h2>

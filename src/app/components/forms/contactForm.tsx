@@ -34,7 +34,7 @@ const ContactForm: FC = () => {
           <div className=" relative mb-4 md:mb-[28px] xl:mb-0">
             <label htmlFor="fullName" className={clsx(styles.label, { [styles['label-error']]: errors.fullName })}>Full name</label>
             <input 
-              id="fullName"
+              id="nane"
               {...register('fullName')} 
               className={clsx(styles.input, { [styles['error-color']]: errors.fullName })}
               placeholder="John Smith"
@@ -49,7 +49,7 @@ const ContactForm: FC = () => {
           <div className=" relative mb-4 md:mb-0 ">
             <label htmlFor="email" className={clsx(styles.label, { [styles['label-error']]: errors.email })}>E-mail</label>
             <input 
-              id="email"
+              id="e-mail"
               {...register('email')} 
               className={clsx(styles.input, { [styles['error-color']]: errors.email })}
               placeholder="johnsmith@email.com"
@@ -66,7 +66,7 @@ const ContactForm: FC = () => {
           <div className="mb-4 md:w-[463px]  xl:mb-6 ">
             <label htmlFor="message" className={styles.label}>Message</label>
             <textarea 
-              id="message"
+              id="textarea"
               {...register('message')} 
               className={clsx(styles.input, styles.contactTextarea)}
             ></textarea>
