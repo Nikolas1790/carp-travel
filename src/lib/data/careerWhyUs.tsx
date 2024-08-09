@@ -3,7 +3,6 @@ interface CareerWhyUsProps  {
   title: string;
   description: string;
 }
-
 const CareerWhyUs: CareerWhyUsProps[] = [
   {
     id: 1,
