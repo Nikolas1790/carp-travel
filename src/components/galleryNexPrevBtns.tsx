@@ -25,7 +25,6 @@ const GalleryNextPrevBtns: FC<GalleryNextPrevBtnsProps> = ({  gallery }) => {
         {gallery.btnNext}
       </button>     
     </>      
-
   );
 };
 

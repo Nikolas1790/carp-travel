@@ -4,12 +4,10 @@ import about from '../../lib/data/about.json';
 
 const About: FC = () => {
   return (
-    <section 
-      id="about" 
+    <section id="about" 
       className="h-auto bg-cover bg-center bg-no-repeat  bg-about-sm retina:bg-about-sm-2x
         md:bg-about-md md:h-[689px]  md:retina:bg-about-md-2x
-        xl:bg-about-xl xl:h-[809px] xl:retina:bg-about-xl-2x
-      "
+        xl:bg-about-xl xl:h-[809px] xl:retina:bg-about-xl-2x"
     >
       <Container>
         <div className="paddingY md:relative">

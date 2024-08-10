@@ -20,8 +20,7 @@ const Gallery: FC = () => {
     >
       <Container >
         <div className="paddingY relative  flex flex-col w-[280px] h-[801px] md:w-[704px] md:h-[575px] xl:w-[1280px] xl:h-[788px]  ">
-          <h2 className='title mb-6 md:mb-[72px] md:mx-auto xl:mx-0'><span>{gallery.titleSpan}</span> {gallery.title}</h2>
-          
+          <h2 className='title mb-6 md:mb-[72px] md:mx-auto xl:mx-0'><span>{gallery.titleSpan}</span> {gallery.title}</h2>          
           <GalleryImageList />
           <GalleryImgsTablAndDesc />
         </div>
